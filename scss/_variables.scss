@@ -18,6 +18,10 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
+// custom-color scheme
+$gray-light-body: #F2F2F6 !default;
+$light-gray-text: #B9B9B9 !default;
+// custom-color scheme
 $grays: () !default;
 $grays: map-merge(( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), $grays);
 $blue: #007bff !default;
@@ -30,6 +34,7 @@ $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+$ftcolor: #242424 !default;
 $colors: () !default;
 $colors: map-merge(( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800), $colors);
 $primary: $blue !default;
@@ -77,8 +82,8 @@ $sizes: map-merge(( 25: 25%, 50: 50%, 75: 75%, 100: 100%), $sizes);
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-bg: $gray-light-body !default;
+$body-color: $black !default;
 // Links
 //
 // Style anchor elements.
@@ -94,13 +99,13 @@ $paragraph-margin-bottom: 1rem !default;
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1680px) !default;
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
-$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1600px) !default;
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1400px) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 // Grid columns
 //
@@ -131,8 +136,9 @@ $font-family-merriweather-regular: 'merriweather-regular' !default;
 $font-family-merriweather-bold: 'merriweather-bold' !default;
 $font-family-merriweather-bold-italic: 'merriweather-bold-italic' !default;
 $font-family-merriweather-black: 'merriweather-black' !default;
-$font-family-montserrat: 'montserrat',
-serif !default;
+$font-family-montserrat: 'montserrat' !default;
+$font-family-montserrat-light: 'montserrat-light' !default;
+$font-family-montserrat-semibold: 'montserrat-semibold' !default;
 $font-family-base: $font-family-merriweather-regular !default;
 // stylelint-enable value-keyword-case
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
@@ -154,24 +160,26 @@ $h6-font-size: $font-size-base !default;
 $font-size-10: 0.625rem !default;
 $font-size-12: 0.75rem !default;
 $font-size-20: 1.25rem !default;
+$font-size-22: 1.375rem !default;
 $font-size-24: 1.5rem !default;
 $font-size-28: 1.75rem !default;
 $font-size-30: 1.875rem !default;
 $font-size-35: 2.1875rem !default;
-$font-size-46: 2.875rem !default;
+$font-size-41: 2.5625rem !default;
 //line-height
 $line-height-13: 0.8125rem !default;
 $line-height-15: 0.9375rem !default;
 $line-height-19: 1.1875rem !default;
 $line-height-24: 1.5rem !default;
 $line-height-29: 1.8125rem !default;
+$line-height-31: 1.9375rem !default;
 $line-height-36: 2.25rem !default;
 $line-height-38: 2.375rem !default;
 $line-height-44: 2.75rem !default;
-$line-height-58: 3.625rem !default;
+$line-height-51: 3.1875rem !default;
 //font path 
 $merriweather-font-path: "../fonts/merriweather/" !default;
-$montserrat-font-path-: "../fonts/montserrat/" !default;
+$montserrat-font-path: "../fonts/montserrat/" !default;
 //Custom variables ends//
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family: 'merriweather',

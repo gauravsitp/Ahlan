@@ -14,6 +14,26 @@
     src: url("#{$merriweather-font-path}Merriweather-Black.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: $font-family-merriweather-bold-italic;
+    src: url("#{$merriweather-font-path}Merriweather-BoldItalic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: $font-family-montserrat;
+    src: url("#{$montserrat-font-path}Montserrat-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: $font-family-montserrat-light;
+    src: url("#{$montserrat-font-path}Montserrat-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: $font-family-montserrat-semibold;
+    src: url("#{$montserrat-font-path}Montserrat-SemiBold.ttf") format('truetype');
+}
+
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after
 //
 // Headings
@@ -73,12 +93,6 @@ h6,
 }
 
 //custom class
-.demo-class {
-    font-size: $font-size-46;
-    font-family: $font-family-merriweather-black;
-    line-height: $line-height-58;
-}
-
 //custom class
 // Type display classes
 .display-1 {

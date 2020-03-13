@@ -53,9 +53,9 @@ html {
   }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1440px) {
   .container {
-    max-width: 1600px;
+    max-width: 1400px;
   }
 }
 
@@ -1141,7 +1141,7 @@ html {
   }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1440px) {
   .col-xxl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1518,7 +1518,7 @@ html {
   }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1440px) {
   .d-xxl-none {
     display: none !important;
   }
@@ -2307,7 +2307,7 @@ html {
   }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1440px) {
   .flex-xxl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;

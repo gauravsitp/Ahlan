@@ -1,0 +1,85 @@
+a {
+    cursor: pointer;
+    transition: .5s color;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+section.addvertisement {
+    border-top: solid .6px #C7C7C7;
+    border-bottom: solid .6px #C7C7C7;
+    background: #fff;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.pd-r {
+    padding-right: 1.4375rem;
+}
+
+.pd-l {
+    padding-left: 1.4375rem;
+}
+
+.mb-7 {
+    margin-bottom: 5rem !important;
+}
+
+.pb-7 {
+    padding-bottom: 5rem !important;
+}
+
+.pt-7 {
+    padding-top: 5rem !important;
+}
+
+.cus-big-title {
+    font-size: $font-size-41;
+    line-height: $line-height-51;
+    font-family: $font-family-merriweather-bold;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.cus-md-title {
+    font-size: $font-size-35;
+    line-height: $line-height-44;
+    font-family: $font-family-merriweather-bold;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.cus-date {
+    font-size: $font-size-12;
+    line-height: $line-height-15;
+    font-family: $font-family-montserrat;
+    color: $light-gray-text;
+    text-transform: uppercase;
+}
+
+.cus-small-two-title {
+    font-size: $font-size-22;
+    line-height: $line-height-31;
+    font-family: $font-family-merriweather-bold;
+}
+
+.row-cus:after {
+    clear: both;
+}
+
+.row-cus:before {
+    display: table;
+    content: " ";
+}
+
+.trending-slider {
+    overflow: auto;
+}

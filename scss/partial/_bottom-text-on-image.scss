@@ -1,0 +1,65 @@
+    .big-main-image {
+        position: relative;
+        .bottom-content {
+            color: white;
+            z-index: 2;
+            background: #f2f2f6;
+            position: absolute;
+            bottom: 0;
+            max-width: 70%;
+            text-align: center;
+            right: 0;
+            left: 0;
+            display: block;
+            margin: 0 50px;
+            margin: 0 auto;
+            margin-bottom: -4.3rem;
+            .cus-content {
+                background: $gray-light-body;
+                display: inline-block;
+                padding: 0 70px;
+                padding-top: .5rem;
+                margin-bottom: .6rem;
+            }
+            .icon-center {
+                width: 240px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    background: #000;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    z-index: -2;
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    background: #000;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    z-index: -2;
+                }
+            }
+        }
+    }
+    
+    .icon-center {
+        .center-icon {
+            display: inline-block;
+            padding: 0 10px;
+            background: #f2f2f6;
+        }
+    }
+    
+    .icon-center .center-icon.trns-bg {
+        background: transparent;
+    }

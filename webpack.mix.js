@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 mix
-//.copy('node_modules/bootstrap', 'resources')
+    .copy('node_modules/@fortawesome', 'fonts/')
     .webpackConfig({
 
     })
