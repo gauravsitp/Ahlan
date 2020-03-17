@@ -7,7 +7,7 @@ footer {
     height: 1px;
     content: "";
     position: absolute;
-    top: 60%;
+    top: 50%;
     width: 100%;
     @media (max-width: 1199px) {
         top: 50%;
@@ -16,12 +16,16 @@ footer {
 
 .bck-line {
     position: relative;
+    .col-md-5 {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .ft-logo {
     img {
         background: #fff;
-        vertical-align: center;
+        margin-top: -15px;
     }
 }
 

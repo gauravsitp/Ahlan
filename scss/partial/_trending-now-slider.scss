@@ -4,9 +4,26 @@
     }
 }
 
+.row-cus {
+    .slick-slider .slick-track {
+        @include maxbreakpoint(sm) {
+            max-height: 60px;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+    @include maxbreakpoint(sm) {
+        position: relative;
+    }
+}
+
 .bg-color-dark {
     background: #F2F2F6;
     position: relative;
+    @include maxbreakpoint(sm) {
+        position: initial;
+        background: #242424;
+    }
     .trending {
         position: absolute;
         width: 220px;
@@ -32,7 +49,7 @@
     p {
         font-size: $font-size-30;
         line-height: $line-height-38;
-        font-family: $font-family-merriweather-bold;
+        font-family: $font-family-merriweather-regular;
     }
 }
 
@@ -43,10 +60,37 @@
         line-height: $line-height-29;
         font-family: $font-family-montserrat;
         color: #767676;
+        @include maxbreakpoint(sm) {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1rem;
+        }
     }
 }
 
-@media (min-width: 768px) {
+.col-md-cus-5 .content p {
+    display: none;
+}
+
+@include maxbreakpoint(sm) {
+    .content {
+        width: 50px !important;
+        float: initial !important;
+        border-bottom: solid 3px #fff !important;
+        margin: 0px 5px;
+        display: inline-block !important;
+        .count {
+            margin-right: 0;
+        }
+    }
+}
+
+@include minbreakpoint(md) {
+    .trending-slider {
+        .small-btn-content {
+            padding: 0px 80px;
+        }
+    }
     .col-md-cus-7 {
         max-width: 58.333333%;
         float: left;
@@ -64,16 +108,20 @@
     }
     .content.slick-slide {
         border-right: 10px solid #F2F2F6;
-        padding: 20px 40px 20px 120px;
+        padding: 20px 0 20px 100px;
         margin-left: 0;
         border: 0 !important;
         display: flex !important;
         min-height: 122px;
         width: 100% !important;
         outline: none;
+        cursor: pointer;
     }
     .content.slick-slide.slick-current.slick-active {
         background: #fff;
         border-right: 10px solid #707070 !important;
+    }
+    .col-md-cus-5 .content p {
+        display: block;
     }
 }

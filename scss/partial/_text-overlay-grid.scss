@@ -5,7 +5,7 @@
     position: relative;
     .thumb-image {
         a {
-            color: red;
+            color: #000;
             &:before {
                 content: '';
                 width: 100%;
@@ -23,12 +23,12 @@
         position: absolute;
         z-index: 1;
         bottom: 0;
-        @media (min-width: 992px) {
-            padding-bottom: 1.25rem;
-        }
-        @media (max-width: 767px) {
-            padding-bottom: 1.25rem;
-        }
+        // @include breakpoint(md) {
+        //     padding-bottom: 1rem;
+        // }
+        // @include breakpoint(xs) {
+        //     padding-bottom: 1.25rem;
+        // }
         left: 0;
         right: 0;
         pointer-events: none;
@@ -37,7 +37,15 @@
             line-height: $line-height-24;
             font-family: $font-family-merriweather-bold-italic;
             color: $white;
-            max-width: 70%;
+            @include breakpoint(sm) {
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+            @include minbreakpoint(md) {
+                max-width: 70%;
+                margin-bottom: 0rem;
+            }
+            max-width: 90%;
             margin: 0 auto;
             margin-bottom: .5rem;
         }

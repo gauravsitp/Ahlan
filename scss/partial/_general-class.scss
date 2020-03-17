@@ -42,19 +42,43 @@ section.addvertisement {
 }
 
 .cus-big-title {
-    font-size: $font-size-41;
-    line-height: $line-height-51;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
     font-family: $font-family-merriweather-bold;
     color: $black;
     margin-bottom: 0;
+    @include breakpoint(sm) {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+    }
+    @include breakpoint(md) {
+        font-size: 1.9375rem;
+        line-height: 2.5625rem;
+    }
+    @include breakpoint(lg) {
+        font-size: $font-size-41;
+        line-height: $line-height-51;
+    }
 }
 
 .cus-md-title {
-    font-size: $font-size-35;
-    line-height: $line-height-44;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     font-family: $font-family-merriweather-bold;
     color: $black;
     margin-bottom: 0;
+    @include breakpoint(sm) {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    @include breakpoint(md) {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+    }
+    @include breakpoint(lg) {
+        font-size: $font-size-35;
+        line-height: $line-height-44;
+    }
 }
 
 .cus-date {
@@ -82,4 +106,19 @@ section.addvertisement {
 
 .trending-slider {
     overflow: auto;
+}
+
+@include maxbreakpoint(xs) {
+    .container-compact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row-compact {
+        margin-left: 0;
+        margin-right: 0;
+        >[class^="col"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }

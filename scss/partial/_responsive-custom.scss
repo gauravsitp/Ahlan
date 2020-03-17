@@ -1,0 +1,80 @@
+    // @include media-breakpoint-up(xs) { ... }
+    // @include media-breakpoint-up(sm) { ... }
+    // @include media-breakpoint-up(md) { ... }
+    // @include media-breakpoint-up(lg) { ... }
+    // @include media-breakpoint-up(xl) { ... }
+    // @media (min-width: 576px) { ... }
+    // // Medium devices (tablets, 768px and up)
+    // @media (min-width: 768px) { ... }
+    // // Large devices (desktops, 992px and up)
+    // @media (min-width: 992px) { ... }
+    // // Extra large devices (large desktops, 1200px and up)
+    // @media (min-width: 1200px) { ... }
+    // @include media-breakpoint-up(xl) {
+    //     .big-main-image {
+    //         .bottom-content {
+    //             max-width: 70%;
+    //             .cus-content {
+    //                 padding: 0 70px;
+    //             }
+    //         }
+    //     }
+    // }
+    @mixin breakpoint($point) {
+        @if ($point==lg) {
+            @media (min-width: 1200px) {
+                @content
+            }
+        }
+        @else if ($point==md) {
+            @media (min-width: 992px) and (max-width: 1199px) {
+                @content
+            }
+        }
+        @else if ($point==sm) {
+            @media (min-width: 768px) and (max-width: 991px) {
+                @content
+            }
+        }
+        @else if ($point==xs) {
+            @media (max-width: 767px) and (min-width: 641px) {
+                @content
+            }
+        }
+        @else if ($point==xxs) {
+            @media (max-width: 640px) and (min-width: 481px) {
+                @content
+            }
+        }
+        @else if ($point==xxxs) {
+            @media (max-width: 480px) {
+                @content
+            }
+        }
+    }
+    
+    @mixin maxbreakpoint($max-point) {
+        @if ($max-point==sm) {
+            @media (max-width: 992px) {
+                @content
+            }
+        }
+        @else if ($max-point==xs) {
+            @media (max-width: 767px) {
+                @content
+            }
+        }
+    }
+    
+    @mixin minbreakpoint($min-point) {
+        @if ($min-point==md) {
+            @media (min-width: 992px) {
+                @content
+            }
+        }
+        @else if ($min-point==sm) {
+            @media (min-width: 768px) {
+                @content
+            }
+        }
+    }
