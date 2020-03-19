@@ -378,6 +378,11 @@ template {
 }
 
 @font-face {
+  font-family: "merriweather-light-italic";
+  src: url("../fonts/merriweather/Merriweather-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "montserrat";
   src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
 }

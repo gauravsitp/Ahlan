@@ -1,6 +1,7 @@
 @import "functions";
 @import "variables";
 @import "mixins";
+@import "partial/base";
 @import "partial/responsive-custom";
 @import "partial/nav-style";
 @import "partial/general-class";
@@ -9,5 +10,7 @@
 @import "partial/normal-grid-text";
 @import "partial/trending-now-slider";
 @import "partial/three-column-bottom";
+@import "partial/article";
+@import "partial/section-pages";
 @import "partial/footer";
 @import "partial/responsive-custom";
