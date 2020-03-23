@@ -20,6 +20,11 @@
 }
 
 @font-face {
+    font-family: $font-family-merriweather-light-italic;
+    src: url("#{$merriweather-font-path}Merriweather-LightItalic.ttf") format('truetype');
+}
+
+@font-face {
     font-family: $font-family-montserrat;
     src: url("#{$montserrat-font-path}Montserrat-Regular.ttf") format('truetype');
 }

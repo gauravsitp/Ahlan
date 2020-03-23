@@ -109,7 +109,26 @@ jQuery(document).ready(function() {
             $("header").removeClass("smaller-header");
         }
     });
+    // $('.slider-body').slick({
+    //     centerMode: true,
+    //     infinite: true,
+    //     slidesToShow: 2,
+    //     adaptiveHeight: true,
+    //     slidesToScroll: 1,
+    //     cssEase: 'linear',
+    //     arrows: false
 
+    // });
+
+    $('.slider').slick({
+        centerMode: true,
+        centerPadding: '25%',
+        slidesToShow: 1,
+        speed: 1000,
+        arrows: false
+            // prevArrow: '<button type="button" class="slick-prev"></button>',
+            // nextArrow: '<button type="button" class="slick-next"></button>'
+    });
     $('.col-md-cus-7').slick({
         slidesToShow: 1,
         slidesToScroll: 1,

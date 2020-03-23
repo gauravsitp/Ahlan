@@ -33,6 +33,10 @@ section.addvertisement {
     margin-bottom: 5rem !important;
 }
 
+.mb-8 {
+    margin-bottom: 8rem !important;
+}
+
 .pb-7 {
     padding-bottom: 5rem !important;
 }
@@ -81,6 +85,16 @@ section.addvertisement {
     }
 }
 
+.cus-lead-title {
+    @include breakpoint(lg) {
+        font-size: $font-size-32;
+        line-height: $line-height-44;
+        font-family: $font-family-merriweather-light-italic;
+        color: #9F9F9F;
+        font-weight: normal;
+    }
+}
+
 .cus-date {
     font-size: $font-size-12;
     line-height: $line-height-15;
@@ -120,5 +134,37 @@ section.addvertisement {
             padding-left: 0;
             padding-right: 0;
         }
+    }
+}
+
+.icon-center {
+    .center-icon {
+        background: #f2f2f6;
+        &.here-now {
+            background-image: url(http://localhost/ahlan/html/assets/img/here-now.png);
+        }
+        &.here-now-white {
+            background-color: transparent;
+            background-image: url(http://localhost/ahlan/html/assets/img/here-now-white.png);
+        }
+        &.thunder {
+            background-image: url(http://localhost/ahlan/html/assets/img/thunder.png);
+        }
+        &.large-icon {
+            padding: 0 10px;
+            width: 31px;
+            height: 30px;
+        }
+        &.small-icon {
+            padding: 0 5px;
+            width: 25px;
+            height: 16px;
+        }
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        // &.trns-bg {
+        //     background-color: transparent;
+        // }
     }
 }
