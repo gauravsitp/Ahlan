@@ -1,3 +1,11 @@
+div#content {
+    overflow: hidden;
+}
+
+.custom-adss iframe {
+    max-width: 100%;
+}
+
 a {
     cursor: pointer;
     transition: .5s color;
@@ -9,6 +17,20 @@ a {
 a:hover {
     color: #000;
     text-decoration: none;
+}
+
+.icon-center {
+    transition: all 1s;
+}
+
+.big-main-image:hover .bottom-content .cus-content h2 a,
+.small-main-img:hover .small-btn-content h3 a {
+    color: #a8a8a8;
+}
+
+.big-main-image:hover .bottom-content .icon-center,
+.small-main-img:hover .small-btn-content .icon-center {
+    opacity: .4
 }
 
 section.addvertisement {
@@ -86,12 +108,12 @@ section.addvertisement {
 }
 
 .cus-lead-title {
+    font-family: $font-family-merriweather-light-italic;
+    color: #9F9F9F;
+    // font-weight: normal;
     @include breakpoint(lg) {
         font-size: $font-size-32;
         line-height: $line-height-44;
-        font-family: $font-family-merriweather-light-italic;
-        color: #9F9F9F;
-        font-weight: normal;
     }
 }
 

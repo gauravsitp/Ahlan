@@ -39,6 +39,11 @@
     src: url("#{$montserrat-font-path}Montserrat-SemiBold.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: $font-family-montserrat-bold;
+    src: url("#{$montserrat-font-path}Montserrat-Bold.ttf") format('truetype');
+}
+
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after
 //
 // Headings

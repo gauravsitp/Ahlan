@@ -173,3 +173,20 @@
 .zoom-effect:hover img {
     opacity: .8;
 }
+
+@include maxbreakpoint(xs) {
+    .text-overlay-grid {
+        .container {
+            padding-right: 4px;
+            padding-left: 4px;
+            .row {
+                margin-right: -4px;
+                margin-left: -4px;
+                .col-12 {
+                    padding-right: 4px;
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+}

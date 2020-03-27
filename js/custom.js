@@ -82,15 +82,32 @@ jQuery(document).ready(function() {
 
     /*--------- for navigation  ----------*/
 
+    jQuery('.nav-tab .nav-item').off('hover');
     jQuery('.nav-tab .nav-item').hover(function() {
-        var paneIndex = jQuery(this).index();
+            var navItem = jQuery(this);
+            var paneIndex = jQuery(this).index();
+            var navTab = navItem.closest('.nav-tab');
+            var navPane = navTab.next().find('.nav-pane');
+            var paneToActive = navPane.eq(paneIndex);
 
-        jQuery(this).closest('.nav-tab').next().find('.nav-pane').eq(paneIndex).addClass('active');
-        jQuery('li.nav-item.dropdown').removeClass('active');
-        jQuery(this).closest('li.nav-item.dropdown').addClass('active');
-    }, function() {
+            navTab.find('.nav-item').removeClass('active');
+            navItem.addClass('active');
+            navPane.removeClass('active'); // remove all existing pane active class 
+            paneToActive.addClass('active'); // active relative pane
+            navItem.closest('li.nav-item.dropdown').addClass('active');
+        },
+        function() {
+            var navItem = jQuery(this);
+            var paneIndex = jQuery(this).index();
+            var navTab = navItem.closest('.nav-tab');
+            navTab.find('.nav-item').removeClass('active')
+        }
+    );
+
+    jQuery(document).on('mouseleave', '.nav-pane', function() {
+        jQuery(this).removeClass('active');
+        jQuery(this).closest('.submenu').find('.nav-item').removeClass('active');
         jQuery(this).closest('li.nav-item.dropdown').removeClass('active');
-        jQuery('.nav-tab').next().find('.nav-pane').removeClass('active');
     });
 
     jQuery('#mega-canvas-link').on('click', function(e) {
@@ -119,8 +136,21 @@ jQuery(document).ready(function() {
     //     arrows: false
 
     // });
+    if ($(window).width() < 768) {
+        $('.mobile-slider').slick({
+            centerMode: true,
+            centerPadding: '25%',
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
+            cssEase: 'linear',
+            arrows: false
 
-    $('.slider').slick({
+        });
+    }
+
+    $('.section-slider').slick({
         centerMode: true,
         centerPadding: '25%',
         slidesToShow: 1,
