@@ -1,0 +1,19 @@
+.error-page {
+    img {width:40%;}
+    h4 {font-size: $font-size-28; font-family: $font-family-montserrat-semibold;}
+    p {font-size: $font-size-22; font-family: $font-family-merriweather-light-italic; color: #9f9f9f; line-height: 1.32}
+    a.go-home {
+        background: #000;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 10px;
+        font-family: $font-family-montserrat;
+        letter-spacing: 2.2px;
+        font-size: $font-size-12; 
+    }
+}
