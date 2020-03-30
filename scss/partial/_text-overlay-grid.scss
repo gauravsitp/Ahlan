@@ -174,6 +174,82 @@
     opacity: .8;
 }
 
+// .lazy-load-image-wrapper .loading {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     margin: auto;
+// }
+// .loading {
+//     display: block;
+//     position: relative;
+//     width: 55px;
+//     height: 48px;
+//     margin: 0 auto;
+// }
+// .loading:after,
+// .loading:before {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     content: "";
+//     background: url(https://goop.com/wp-content/dist/images/logo-goop-g-2x.png) 0 0/100% no-repeat;
+//     width: 55px!important;
+//     height: 0;
+//     animation: goop-loader 2s infinite;
+//     z-index: 3;
+// }
+// .loading:after {
+//     animation: none;
+//     height: 48px;
+//     visibility: visible;
+//     opacity: .32;
+//     z-index: 2;
+// }
+// @keyframes goop-loader {
+//     0% {
+//         height: 0
+//     }
+//     7.69% {
+//         height: 4px
+//     }
+//     15.38% {
+//         height: 8px
+//     }
+//     23.07% {
+//         height: 12px
+//     }
+//     30.76% {
+//         height: 16px
+//     }
+//     38.46% {
+//         height: 20px
+//     }
+//     46.15% {
+//         height: 24px
+//     }
+//     53.84% {
+//         height: 28px
+//     }
+//     61.53% {
+//         height: 32px
+//     }
+//     69.23% {
+//         height: 36px
+//     }
+//     76.92% {
+//         height: 40px
+//     }
+//     92.30% {
+//         height: 44px
+//     }
+//     to {
+//         height: 48px
+//     }
+// }
 @include maxbreakpoint(xs) {
     .text-overlay-grid {
         .container {

@@ -27,10 +27,7 @@
     }
     .trending {
         position: absolute;
-        width: 220px;
-        left: 50%;
-        margin-left: -110px;
-        padding: 5px 0px;
+        width: 100%;
         text-align: center;
         top: 0;
         margin-top: -25px;
@@ -38,10 +35,13 @@
         line-height: 2.375rem;
         font-family: "montserrat-light";
         text-transform: uppercase;
-        background: #fff;
-        border-top: solid 2px #979797;
-        border-bottom: solid 2px #979797;
         color: #626262;
+        span {
+            background: #fff;
+            border-top: solid 2px #979797;
+            border-bottom: solid 2px #979797;
+            padding: 5px 0px;
+        }
     }
 }
 
