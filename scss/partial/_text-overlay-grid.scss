@@ -33,27 +33,45 @@
         right: 0;
         pointer-events: none;
         .overlay-title {
-            font-size: $font-size-20;
-            line-height: $line-height-24;
+            font-size: $font-size-20 - 0.125 *3;
+            line-height: $line-height-24 - 0.125 *3;
             font-family: $font-family-merriweather-bold-italic;
             color: $white;
+            margin-bottom: .2rem;
             @include breakpoint(sm) {
-                font-size: 1rem;
-                line-height: 1rem;
+                font-size: $font-size-20 - 0.125 *3;
+                line-height: $line-height-24 - 0.125 *3;
+                margin-bottom: .2rem;
             }
-            @include minbreakpoint(md) {
-                max-width: 70%;
-                margin-bottom: 0rem;
+            @include breakpoint(md) {
+                font-size: $font-size-20 - 0.125;
+                line-height: $line-height-24 - 0.125;
             }
+            @include breakpoint(lg) {
+                font-size: $font-size-20;
+                line-height: $line-height-24;
+                margin-bottom: .5rem;
+            }
+            // @include minbreakpoint(md) {
+            //     margin-bottom: 0rem;
+            // }
             max-width: 90%;
             margin: 0 auto;
-            margin-bottom: .5rem;
         }
         .icon-center {
             display: flex;
             justify-content: center;
             padding: 5px 0px;
-            width: 120px;
+            width: 70px;
+            @include breakpoint(md) {
+                width: 90px;
+            }
+            @include breakpoint(sm) {
+                width: 70px;
+            }
+            @include breakpoint(lg) {
+                width: 120px;
+            }
             margin: 0 auto;
             text-align: center;
             position: relative;
@@ -61,7 +79,16 @@
             &:after {
                 content: "";
                 display: block;
-                width: 40px;
+                width: 25px;
+                @include breakpoint(md) {
+                    width: 30px;
+                }
+                @include breakpoint(sm) {
+                    width: 25px;
+                }
+                @include breakpoint(lg) {
+                    width: 40px;
+                }
                 height: 1px;
                 background: #fff;
                 position: absolute;
