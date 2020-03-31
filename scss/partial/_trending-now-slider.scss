@@ -12,8 +12,7 @@
     .slick-slider {
         .slick-track {
             @include maxbreakpoint(sm) {
-                text-align: center;
-                
+                text-align: center;                
             }
         }
 
@@ -109,36 +108,34 @@
     .slider-cus-thumbnail {    
         &.slick-vertical {
             text-align: center;
+            margin-top: 30px;
 
             .slick-slide{
                 float: none;
                 display: inline-block;
                 width: auto !important;
+                min-width: 80px;
             }
         }
     }
 
     .content {
-        width: 50px !important;
-        float: initial !important;
-        // border-bottom: solid 3px #f4f4f7 !important;
+        width: 50px;
         margin: 0px 5px;
-        display: inline-block !important;
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+
         .count {
             margin-right: 0;
         }
-    }
-    .content {
-        &:focus {
-            outline: none;
-        }
-        background-color: #f4f4f7;        
     }
 
     .slick-current{
         .content{
             border-top: solid 3px #d3d3d3 !important;
-        }        
+            background-color: #f4f4f7;
+        }
     }
 }
 
@@ -152,8 +149,7 @@
     .slider-cus-thumbnail{ 
 
         &.slick-vertical{
-            .slick-slide{
-            
+            .slick-slide{            
                 border-right: 10px solid transparent;
 
                 &.slick-current.slick-active {
