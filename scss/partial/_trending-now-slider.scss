@@ -5,61 +5,68 @@
 }
 
 .row-cus {
-    .slick-slider .slick-track {
-        @include maxbreakpoint(sm) {
-            max-height: 40px;
-            text-align: center;
-            padding: 10px 0;
-            padding-bottom: 0;
-        }
-    }
     @include maxbreakpoint(sm) {
         position: relative;
+    }
+
+    .slick-slider {
+        .slick-track {
+            @include maxbreakpoint(sm) {
+                text-align: center;
+                
+            }
+        }
+
+        &.slider-cus-thumbnail{
+           @include maxbreakpoint(md){
+                .slick-track{
+                    padding-top:0;
+                    height: auto !important;
+                }
+           }
+        }
     }
 }
 
 .bg-color-dark {
     background: #F2F2F6;
     position: relative;
+
     @include maxbreakpoint(sm) {
         position: initial;
         background: #fff;
     }
+
     .trending {
         position: absolute;
         width: 100%;
-        text-align: center;
         top: 0;
         margin-top: -25px;
-        font-size: 1.875rem;
-        line-height: 2.375rem;
-        font-family: "montserrat-light";
+        text-align: center;
+        font: normal 300 1.875rem / 2.375rem $font-family-montserrat-light;
         text-transform: uppercase;
         color: #626262;
+
         span {
             background: #fff;
             border-top: solid 2px #979797;
             border-bottom: solid 2px #979797;
-            padding: 5px 0px;
+            padding: 5px;
+            display: inline-block;
         }
     }
 }
 
-.content.slick-slide {
-    border: 0;
+.content {
     p {
-        font-size: $font-size-30;
-        line-height: $line-height-38;
-        font-family: $font-family-merriweather-regular;
+        font:  $font-size-30#{"/"}$line-height-38 $font-family-merriweather-regular;
     }
 }
 
 .count {
     margin-right: 30px;
     span {
-        font-size: $font-size-24;
-        line-height: $line-height-29;
-        font-family: $font-family-montserrat;
+        font: normal 600 $font-size-24 #{"/"} $line-height-29 $font-family-montserrat;
         color: #767676;
         @include maxbreakpoint(sm) {
             color: #d3d3d3;
@@ -78,6 +85,7 @@
         padding-top: 2rem !important;
         padding-bottom: 0rem !important;
         position: relative;
+
         &:before {
             content: "";
             width: 100%;
@@ -88,6 +96,7 @@
             right: 0;
             z-index: 0;
         }
+
         .row-compact {
             .col-md-cus-7 {
                 .slick-list {
@@ -96,6 +105,19 @@
             }
         }
     }
+
+    .slider-cus-thumbnail {    
+        &.slick-vertical {
+            text-align: center;
+
+            .slick-slide{
+                float: none;
+                display: inline-block;
+                width: auto !important;
+            }
+        }
+    }
+
     .content {
         width: 50px !important;
         float: initial !important;
@@ -106,12 +128,17 @@
             margin-right: 0;
         }
     }
-    .content.slick-current {
+    .content {
         &:focus {
             outline: none;
         }
-        background-color: #f4f4f7;
-        border-top: solid 3px #d3d3d3 !important;
+        background-color: #f4f4f7;        
+    }
+
+    .slick-current{
+        .content{
+            border-top: solid 3px #d3d3d3 !important;
+        }        
     }
 }
 
@@ -121,6 +148,25 @@
             padding: 0px 80px;
         }
     }
+    
+    .slider-cus-thumbnail{ 
+
+        &.slick-vertical{
+            .slick-slide{
+            
+                border-right: 10px solid transparent;
+
+                &.slick-current.slick-active {
+                    border-right-color: #707070;
+
+                    .content{
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+
     .col-md-cus-7 {
         max-width: 58.333333%;
         float: left;
@@ -136,8 +182,7 @@
         margin-left: -70px;
         padding: 80px 0 20px;
     }
-    .content.slick-slide {
-        border-right: 10px solid #F2F2F6;
+    .content{
         padding: 20px 0 20px 100px;
         margin-left: 0;
         border: 0 !important;
@@ -148,10 +193,7 @@
         cursor: pointer;
         padding-right: 10px;
     }
-    .content.slick-slide.slick-current.slick-active {
-        background: #fff;
-        border-right: 10px solid #707070 !important;
-    }
+
     .col-md-cus-5 .content p {
         display: block;
     }
