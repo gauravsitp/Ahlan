@@ -1,52 +1,63 @@
-.normal-grid-text {
-    .pd-r,
-    .pd-l {
-        padding: 0 8px;
-    }
-}
-
-.cus-small-title {
-    font-size: $font-size-28;
-    line-height: $line-height-36;
-    font-family: $font-family-merriweather-bold;
-}
-
+// .normal-grid-text {
+//     .pd-r,
+//     .pd-l {
+//         padding: 0 8px;
+//     }
+// }
+// .cus-small-title {
+//     font-size: $font-size-28;
+//     line-height: $line-height-36;
+//     font-family: $font-family-merriweather-bold;
+// }
 .small-main-img {
     .cus-sm-img {
         margin-bottom: 1.25rem;
     }
     .small-btn-content {
         text-align: center;
-        .icon-center {
-            padding: 5px 0px;
-            width: 147px;
-            margin: 0 auto;
-            position: relative;
-            &:before,
-            &:after {
-                content: "";
-                display: block;
-                width: 55px;
-                height: 1px;
-                background: #000;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                z-index: -2;
-            }
-            &:after {
-                left: initial;
-                right: 0;
-                top: 50%;
-            }
-            .heart-icon {
-                content: "";
-                width: 25px;
-                min-height: 26px;
-                background: url(../assets/img/Sprite.png) no-repeat center center;
-                background-position: -146px -138px;
-                margin: 0 auto;
+        // .icon-center {
+        //     padding: 5px 0px;
+        //     width: 147px;
+        //     margin: 0 auto;
+        //     position: relative;
+        //     &:before,
+        //     &:after {
+        //         content: "";
+        //         display: block;
+        //         width: 55px;
+        //         height: 1px;
+        //         background: #000;
+        //         position: absolute;
+        //         left: 0;
+        //         top: 50%;
+        //         z-index: -2;
+        //     }
+        //     &:after {
+        //         left: initial;
+        //         right: 0;
+        //         top: 50%;
+        //     }
+        //     .heart-icon {
+        //         content: "";
+        //         width: 25px;
+        //         min-height: 26px;
+        //         background: url(../assets/img/Sprite.png) no-repeat center center;
+        //         background-position: -146px -138px;
+        //         margin: 0 auto;
+        //     }
+        // }
+    }
+}
+
+@include maxbreakpoint(xs) {
+    .three-column-bottom {
+        .small-main-img {
+            .cus-sm-img {
+                margin-bottom: .6rem;
             }
         }
+    }
+    .small-main-img {
+        margin-bottom: 1rem;
     }
 }

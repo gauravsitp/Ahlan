@@ -206,6 +206,7 @@
     overflow-y: scroll;
     padding-right: 90px;
     height: 550px;
+    background: #fff;
     .post-main {
         height: inherit;
         overflow: hidden;
@@ -239,9 +240,9 @@
     }
     .article-slide-item {
         float: left;
-        height: 160px;
-        width: 160px;
-        margin: 0 10px 10px;
+        height: 150px;
+        width: 150px;
+        margin: 0 10px 19px;
         overflow: hidden;
     }
     img {

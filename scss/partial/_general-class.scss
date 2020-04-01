@@ -45,10 +45,16 @@ section.addvertisement {
 
 .pd-r {
     padding-right: 1.4375rem;
+    @include maxbreakpoint(xs) {
+        padding-right: 8px;
+    }
 }
 
 .pd-l {
     padding-left: 1.4375rem;
+    @include maxbreakpoint(xs) {
+        padding-left: 8px;
+    }
 }
 
 .mb-7 {
@@ -76,9 +82,10 @@ section.addvertisement {
     padding-top: 5rem !important;
 }
 
-.cus-big-title {
-    font-size: $font-size-41 - 0.4375rem *3; //24px less
-    line-height: $line-height-51 - 0.4375rem *3; //24px less
+.cus-big-title,
+.trending-slider .cus-small-title {
+    font-size: $font-size-41 - 1.4375rem; //24px less
+    line-height: $line-height-51 - 1.6875rem; //24px less
     font-family: $font-family-merriweather-bold;
     color: $black;
     margin-bottom: 0;
@@ -96,19 +103,37 @@ section.addvertisement {
     }
 }
 
-.cus-md-title {
-    font-size: 1.25rem;
+.cus-small-title {
+    font-size: 1.125rem;
     line-height: 1.5rem;
+    font-family: $font-family-merriweather-bold;
+    @include breakpoint(sm) {
+        font-size: $font-size-28 - 0.625rem;
+        line-height: $line-height-36 - 0.625rem;
+    }
+    @include breakpoint(md) {
+        font-size: $font-size-28 - 0.25rem;
+        line-height: $line-height-36 - 0.25rem;
+    }
+    @include breakpoint(lg) {
+        font-size: $font-size-28;
+        line-height: $line-height-36;
+    }
+}
+
+.cus-md-title {
+    font-size: $font-size-41 - 1.4375rem; //24px less
+    line-height: $line-height-51 - 1.6875rem; //24px less
     font-family: $font-family-merriweather-bold;
     color: $black;
     margin-bottom: 0;
     @include breakpoint(sm) {
-        font-size: 1.5rem;
-        line-height: 1.875rem;
+        font-size: $font-size-35 - 0.4375rem *2; //8px less
+        line-height: $line-height-44 - 0.4375rem *2; //8px less
     }
     @include breakpoint(md) {
-        font-size: 1.75rem;
-        line-height: 2.1875rem;
+        font-size: $font-size-35 - 0.4375rem; //8px less
+        line-height: $line-height-44 - 0.4375rem; //8px less
     }
     @include breakpoint(lg) {
         font-size: $font-size-35;
@@ -139,9 +164,21 @@ section.addvertisement {
 }
 
 .cus-small-two-title {
-    font-size: $font-size-22;
-    line-height: $line-height-31;
+    font-size: $font-size-22 - .375rem;
+    line-height: $line-height-31 - .625rem;
     font-family: $font-family-merriweather-bold;
+    @include breakpoint(sm) {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+    }
+    @include breakpoint(md) {
+        font-size: $font-size-22;
+        line-height: $line-height-31;
+    }
+    @include breakpoint(lg) {
+        font-size: $font-size-22;
+        line-height: $line-height-31;
+    }
 }
 
 .row-cus:after {
@@ -224,8 +261,75 @@ section.addvertisement {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        // &.trns-bg {
-        //     background-color: transparent;
-        // }
+    }
+}
+
+.main-overlay .trns-bg {
+    background: transparent !important;
+}
+
+.icon-center {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(md) {
+        width: 80px;
+    }
+    @include breakpoint(sm) {
+        width: 120px;
+    }
+    @include breakpoint(lg) {
+        width: 130px;
+    }
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        @include breakpoint(md) {
+            width: 30px;
+        }
+        @include breakpoint(sm) {
+            width: 45px;
+        }
+        @include breakpoint(lg) {
+            width: 50px;
+        }
+        height: 1px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: -2;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        @include breakpoint(md) {
+            width: 30px;
+        }
+        @include breakpoint(sm) {
+            width: 45px;
+        }
+        @include breakpoint(lg) {
+            width: 50px;
+        }
+        height: 1px;
+        background: #000;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: -2;
+    }
+}
+
+.icon-center {
+    .center-icon {
+        a {
+            font-size: 0px;
+        }
     }
 }

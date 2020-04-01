@@ -6,7 +6,10 @@
             background: #f2f2f6;
             position: absolute;
             bottom: 0;
-            max-width: 80%;
+            max-width: 90%;
+            @include breakpoint(md) {
+                max-width: 80%;
+            }
             @include breakpoint(lg) {
                 max-width: 70%;
             }
@@ -23,7 +26,7 @@
             .cus-content {
                 background: $gray-light-body;
                 display: inline-block;
-                padding: 0 20px;
+                padding: 0 5px;
                 padding-top: .5rem;
                 margin-bottom: .2rem;
                 @include breakpoint(md) {
@@ -35,54 +38,6 @@
                     padding: 0 70px;
                     padding-top: .5rem;
                     margin-bottom: .6rem;
-                }
-            }
-            .icon-center {
-                width: 100px;
-                display: flex;
-                justify-content: center;
-                @include breakpoint(md) {
-                    width: 160px;
-                }
-                @include breakpoint(lg) {
-                    width: 240px;
-                }
-                margin: 0 auto;
-                position: relative;
-                z-index: 1;
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    @include breakpoint(md) {
-                        width: 60px;
-                    }
-                    @include breakpoint(lg) {
-                        width: 100px;
-                    }
-                    height: 1px;
-                    background: #000;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    z-index: -2;
-                }
-                &:after {
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    @include breakpoint(md) {
-                        width: 60px;
-                    }
-                    @include breakpoint(lg) {
-                        width: 100px;
-                    }
-                    height: 1px;
-                    background: #000;
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    z-index: -2;
                 }
             }
         }

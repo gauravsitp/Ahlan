@@ -1,8 +1,7 @@
-.list-page-section {
-    position: relative;
-}
-
-.img-container-new:after {
+// .list-page-section {
+//     position: relative;
+// }
+.header-transparent:after {
     content: '';
     position: absolute;
     top: 0;
@@ -12,6 +11,31 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0) 100%);
 }
 
+.header-transparent {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@include breakpoint(sm) {
+    .header-transparent {
+        height: 250px;
+    }
+}
+
+@include breakpoint(md) {
+    .header-transparent {
+        height: 350px;
+    }
+}
+
+@include breakpoint(lg) {
+    .header-transparent {
+        height: 450px;
+    }
+}
+
 .sub-navigation {
     position: absolute;
     bottom: 0;
@@ -19,6 +43,7 @@
     width: 100%;
     background-color: rgba(248, 248, 250, .5);
     backdrop-filter: blur(1.9px) opacity(50%);
+    z-index: 999;
 }
 
 ul.sub-navigation-content {

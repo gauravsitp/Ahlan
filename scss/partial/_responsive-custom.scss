@@ -64,11 +64,6 @@
                 @content
             }
         }
-        // @else if ($max-point==xss) {
-        //     @media (max-width: 768px) {
-        //         @content
-        //     }
-        // }
         @else if ($max-point==xs) {
             @media (max-width: 767px) {
                 @content

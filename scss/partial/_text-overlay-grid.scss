@@ -62,15 +62,15 @@
             display: flex;
             justify-content: center;
             padding: 5px 0px;
-            width: 70px;
+            width: 60px;
             @include breakpoint(md) {
-                width: 90px;
+                width: 60px;
             }
             @include breakpoint(sm) {
                 width: 70px;
             }
             @include breakpoint(lg) {
-                width: 120px;
+                width: 90px;
             }
             margin: 0 auto;
             text-align: center;
@@ -79,15 +79,15 @@
             &:after {
                 content: "";
                 display: block;
-                width: 25px;
+                width: 20px;
                 @include breakpoint(md) {
-                    width: 30px;
+                    width: 20px;
                 }
                 @include breakpoint(sm) {
                     width: 25px;
                 }
                 @include breakpoint(lg) {
-                    width: 40px;
+                    width: 33px;
                 }
                 height: 1px;
                 background: #fff;
@@ -290,6 +290,12 @@
                     padding-left: 4px;
                 }
             }
+        }
+    }
+    .mobile-slider {
+        .col-sm-3 {
+            padding-right: 4px;
+            padding-left: 4px;
         }
     }
 }

@@ -1,12 +1,23 @@
-@media (min-width: 768px) {
-    // .three-column-bottom {
-    //     .row {
-    //         margin-right: -32px;
-    //         margin-left: -32px;
-    //         .col-md-4 {
-    //             padding-right: 32px;
-    //             padding-left: 32px;
-    //         }
-    //     }
-    // }
+// @media (min-width: 768px) {
+// .three-column-bottom {
+//     .row {
+//         margin-right: -32px;
+//         margin-left: -32px;
+//         .col-md-4 {
+//             padding-right: 32px;
+//             padding-left: 32px;
+//         }
+//     }
+// }
+// }
+@include maxbreakpoint(xs) {
+    .three-column-bottom .row-compact .col-6:nth-child(odd) {
+        padding-right: 8px;
+    }
+    .three-column-bottom .row-compact .col-6:nth-child(even) {
+        padding-left: 8px;
+    }
+    .three-column-bottom .row-compact .cus-small-two-title {
+        padding: 0 10px;
+    }
 }
