@@ -185,6 +185,17 @@ ul.sub-navigation-content {
     }
 }
 
+.thumb-content .cus-btn:hover,
+.thumb-content .cus-btn:focus {
+    background: #ffffff85;
+    box-shadow: none;
+}
+
+.thumb-content .btn-outline-secondary:not(:disabled):not(.disabled):active {
+    background: #ffffff85;
+    box-shadow: none;
+}
+
 .slide .big-main-image {
     transform: scale(0.9);
     transition: all 1s ease-out;

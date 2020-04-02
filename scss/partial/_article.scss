@@ -48,7 +48,7 @@
             .icon-center {
                 margin: 0;
                 text-align: center;
-                margin: 1.5rem 0;
+                margin: 1.1rem 0;
                 @include maxbreakpoint(xs) {
                     margin: .2rem 0;
                 }
@@ -114,7 +114,7 @@
         width: 120px;
     }
     @include breakpoint(lg) {
-        width: 130px;
+        width: 140px;
     }
 }
 

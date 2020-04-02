@@ -170,6 +170,10 @@ jQuery(document).ready(function() {
         asNavFor: '.slider-cus-thumbnail'
     });
 
+    // $('.col-md-cus-7').on("afterChange", function(event, slick, nextSlide) {
+    //     $('.slider-cus-thumbnail').find('.content').eq(nextSlide).addClass('');
+    // });
+
     $('.slider-cus-thumbnail').slick({
         vertical: true,
         slidesToShow: 5,

@@ -211,21 +211,43 @@ section.addvertisement {
 
 .icon-center {
     .center-icon {
-        background: #f2f2f6;
-        &.here-now {
-            background-image: url(http://localhost/ahlan/html/assets/img/here-now.png);
+        // background: #f2f2f6;
+        &.term-people-events {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-shadow.png);
+        }
+        &.term-here-now {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/here-now.png);
+        }
+        &.term-food-drink {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/food-drink.png);
+        }
+        &.term-life-style {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/life-style.png);
+        }
+        &.term-list-more {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/list-more.png);
+        }
+        &.term-star-stories {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/star-stories.png);
+        }
+        &.travel-getaways {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/travel-getaways.png);
         }
         &.here-now-white {
             background-color: transparent;
             background-image: url(http://localhost/ahlan/html/assets/img/here-now-white.png);
         }
-        &.thunder {
-            background-image: url(http://localhost/ahlan/html/assets/img/thunder.png);
-        }
         &.large-icon {
             //padding: 0 10px;
             width: 21px;
             height: 20px;
+        }
+        @include breakpoint(sm) {
+            &.large-icon {
+                //padding: 0 10px;
+                width: 24px;
+                height: 23px;
+            }
         }
         @include breakpoint(md) {
             &.large-icon {
@@ -272,27 +294,27 @@ section.addvertisement {
     width: 60px;
     display: flex;
     justify-content: center;
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
         width: 80px;
     }
-    @include breakpoint(sm) {
-        width: 120px;
+    @include breakpoint(md) {
+        width: 100px;
     }
     @include breakpoint(lg) {
-        width: 130px;
+        width: 131px;
     }
-    margin: 0 auto;
+    margin: .3rem auto;
     position: relative;
     z-index: 1;
     &:before {
         content: "";
         display: block;
         width: 20px;
-        @include breakpoint(md) {
-            width: 30px;
-        }
         @include breakpoint(sm) {
-            width: 45px;
+            width: 27px;
+        }
+        @include breakpoint(md) {
+            width: 37px;
         }
         @include breakpoint(lg) {
             width: 50px;
@@ -308,11 +330,11 @@ section.addvertisement {
         content: "";
         display: block;
         width: 20px;
-        @include breakpoint(md) {
-            width: 30px;
-        }
         @include breakpoint(sm) {
-            width: 45px;
+            width: 27px;
+        }
+        @include breakpoint(md) {
+            width: 37px;
         }
         @include breakpoint(lg) {
             width: 50px;
@@ -330,6 +352,9 @@ section.addvertisement {
     .center-icon {
         a {
             font-size: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
         }
     }
 }
