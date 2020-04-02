@@ -170,10 +170,42 @@
 
 .also-like {
     padding: 3rem 0;
-    background-image: url(/sites/all/themes/ahlan_revamp/images/white-shadow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-position: center calc((-800px + 10rem) / 2);
+    position: relative;
+
+    &:before, &:after{
+        content:"";
+        display: block;
+        width: 100%;
+        position: absolute;
+        top:0;
+        z-index: -1;        
+    }
+
+    &:before{
+        background-color: $white;
+        height:50%;
+    }
+
+    &:after{
+        top:50%;
+        height:10px;
+        margin-top:-10px;
+        @include border-radius(55%);
+        @include box-shadow(0 10px 10px 0 rgba(0,0,0,0.05));   
+    }
+
+    &-inverse{
+        &:before{
+            top:50%;
+        }
+
+        &:after{
+            top:50%;
+            margin-top:0;
+            @include box-shadow(0 -10px 10px 0 rgba(0,0,0,0.05));  
+        }
+    }
+    
     @include breakpoint(sm) {
         background-position: center -12rem;
     }
