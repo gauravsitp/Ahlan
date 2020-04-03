@@ -3,6 +3,7 @@
     border-color: #242424;
     color: $black;
     padding: 0.75rem;
+    @include text-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
 }
 
 .article-slider {
@@ -54,7 +55,7 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        text-align: center;
+        text-align: cent
     }
 }
 
@@ -62,6 +63,63 @@
     background: $white;
     width: 90px;
     border: 1px solid $gray-300;
+
+    @include maxbreakpoint(xs){
+        width: 40px;
+
+        .btn-grid{
+            width: 38px;
+            height: 38px;
+
+            i{
+                font-size: 0.75rem;
+                line-height: 2;
+                vertical-align: top;
+            }
+        }
+
+        .slider-counter{
+            font-size: 1rem;
+
+            .slider-count{
+                &:after{
+                    width:22px;
+                    transform: translateX();
+                }
+            }
+        }
+
+        
+        .btn-group{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .btn{
+                display: block;
+            }
+        }
+
+        .btn-nav-option{
+            width:38px;
+            height:42px;
+            border-left:0 none;
+            border-right:0 none;
+
+            i{
+                font-size: 1rem;
+                line-height: 1;
+            }
+
+            + .btn-nav-option{
+                margin-left:0;
+                width: 38px;
+                
+            }
+        }
+
+
+    }
 }
 
 .btn-nav-option,
@@ -85,18 +143,23 @@
 
 .btn-nav-option {
     border-top: 1px solid $gray-300;
-    width: 45px;
+    border-right:1px solid $gray-300;
+    width: 44px;
     height: 90px;
+    margin-left:0 !important;
+    @include border-radius(0);
+
     i {
         font-size: $font-size-28;
         line-height: 1;
         vertical-align: middle;
     }
-}
 
-.btn-nav-option+.btn-nav-option {
-    border-left: 1px solid $gray-300;
-    width: 43px;
+    +.btn-nav-option {
+        width: 44px;
+        border-right: 0 none;
+        
+    }
 }
 
 .btn-grid {
@@ -153,8 +216,8 @@
 .post-meta-action {
     margin-top: 35px;
     .btn {
-        font-size: 12px;
-        font-family: $font-family-montserrat;
+        font: normal 600 12px $font-family-montserrat;
+        letter-spacing: 2px;
         text-transform: uppercase;
         min-width: 140px;
         @include border-radius(0);
@@ -162,14 +225,16 @@
 }
 
 .post-caption-meta {
-    font-size: 17px;
-    line-height: 1.58;
+    font: normal normal 1.0625rem / 1.58 $font-family-montserrat;
     margin-right: 25px;
-    font-family: $font-family-montserrat;
     p {
         color: $black;
         font-weight: 400;
         margin-bottom: 5px;
+
+        @include maxbreakpoint(xs){
+            font-family: $font-family-montserrat-bold;
+        }
     }
     .post-credit {
         margin-top: 15px;
@@ -207,6 +272,11 @@
     padding-right: 90px;
     height: 550px;
     background: #fff;
+
+    @include maxbreakpoint(xs){
+        padding-right: 40px;
+    }
+
     .post-main {
         height: inherit;
         overflow: hidden;
@@ -231,6 +301,7 @@
             left: 0;
             top: 50%;
             text-align: center;
+            margin-top:-10px;
         }
     }
     &:after {
@@ -244,6 +315,12 @@
         width: 150px;
         margin: 0 10px 19px;
         overflow: hidden;
+
+        @include maxbreakpoint(xs){
+            width: 130px;
+            height:130px;
+            margin:0 5px 10px;
+        }
     }
     img {
         width: 160px;
