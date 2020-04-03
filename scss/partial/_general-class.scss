@@ -43,6 +43,10 @@ section.addvertisement {
     background: #fff;
 }
 
+.slider-bg-white {
+    background: #fff;
+}
+
 .pd-r {
     padding-right: 1.4375rem;
     @include maxbreakpoint(xs) {
@@ -58,9 +62,9 @@ section.addvertisement {
 }
 
 .mb-7 {
-    margin-bottom: 6rem !important;
+    margin-bottom: 5rem !important;
     @include maxbreakpoint(xs) {
-        margin-bottom: 5.5rem !important;
+        margin-bottom: 4rem !important;
     }
 }
 
@@ -118,6 +122,19 @@ section.addvertisement {
     @include breakpoint(lg) {
         font-size: $font-size-28;
         line-height: $line-height-36;
+    }
+}
+
+.inner-page-cus-small-title {
+    @include maxbreakpoint(xs) {
+        .small-main-img .cus-sm-img {
+            margin-bottom: .6rem;
+        }
+        .cus-small-title {
+            font-size: 1rem;
+            line-height: 1.3125rem;
+            padding: 0 5px;
+        }
     }
 }
 
@@ -218,16 +235,16 @@ section.addvertisement {
         &.term-here-now {
             background-image: url(/sites/all/themes/ahlan_revamp/images/here-now.png);
         }
-        &.term-food-drink {
+        &.term-food-drinks {
             background-image: url(/sites/all/themes/ahlan_revamp/images/food-drink.png);
         }
         &.term-life-style {
             background-image: url(/sites/all/themes/ahlan_revamp/images/life-style.png);
         }
-        &.term-list-more {
+        &.term-lists-more {
             background-image: url(/sites/all/themes/ahlan_revamp/images/list-more.png);
         }
-        &.term-star-stories {
+        &.term-stars-stories {
             background-image: url(/sites/all/themes/ahlan_revamp/images/star-stories.png);
         }
         &.travel-getaways {

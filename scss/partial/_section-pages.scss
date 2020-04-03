@@ -43,23 +43,48 @@
     width: 100%;
     background-color: rgba(248, 248, 250, .5);
     backdrop-filter: blur(1.9px) opacity(50%);
-    z-index: 999;
+    z-index: 99;
+    overflow: hidden;
 }
 
 ul.sub-navigation-content {
-    display: flex;
+    // display: flex;
+    // @include maxbreakpoint(sm) {
+    //     justify-content: start;
+    // }
     padding: 0;
+    text-align: center;
     list-style: none;
     justify-content: center;
     margin: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    appearance: none;
+    -webkit-overflow-scrolling: touch;
     li {
+        display: inline-block;
         a {
             font-size: $font-size-14;
             line-height: $line-height-19;
+            @include maxbreakpoint(sm) {
+                font-size: $font-size-14 - 0.125rem;
+                line-height: $line-height-19 - 0.125rem;
+            }
+            @include maxbreakpoint(xs) {
+                font-size: $font-size-14 - 0.125rem*2;
+                line-height: $line-height-19 - 0.125rem*2;
+            }
             font-family: $font-family-montserrat;
             color: #fff;
             text-transform: uppercase;
             padding: 14px 20px 14px 20px;
+            @include maxbreakpoint(sm) {
+                padding: 10px 20px 10px 20px;
+            }
+            @include maxbreakpoint(xs) {
+                padding: 10px 10px 10px 10px;
+            }
             display: inline-block;
             position: relative;
             &:before {
@@ -88,19 +113,49 @@ ul.sub-navigation-content {
 }
 
 .section-celebrity {
-    background-image: url(../assets/img/celebrity.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
+    background-position: center center;
+    padding: 7rem 0 2rem 0 !important;
+    @include maxbreakpoint(sm) {
+        padding: 4rem 0 0rem 0 !important
+    }
+    @include maxbreakpoint(xs) {
+        padding: 4rem 0 0rem 0 !important
+    }
+}
+
+.celebrity-news-slider-bg,
+.event-gallery-slider-bg {
+    background-image: url(/sites/all/themes/ahlan_revamp/images/celebrity-news.png);
+}
+
+@include maxbreakpoint(xs) {
+    .section-celebrity.py-5 {
+        padding-bottom: 2rem !important;
+    }
 }
 
 .parallax-image-section {
-    min-height: 720px;
+    min-height: 208px;
     background-repeat: no-repeat;
     position: relative;
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom center;
+    @include breakpoint(sm) {
+        min-height: 380px;
+    }
+    @include breakpoint(md) {
+        min-height: 520px;
+    }
+    @include breakpoint(lg) {
+        min-height: 720px;
+    }
+    @include maxbreakpoint(xs) {
+        background-attachment: initial;
+    }
 }
 
 .parallax-image-section {
@@ -131,14 +186,31 @@ ul.sub-navigation-content {
     }
     .thumb-content {
         .overlay-title {
-            font-size: $font-size-33;
-            line-height: $line-height-44;
+            font-size: 14px;
+            line-height: 18px;
             font-family: $font-family-merriweather-bold;
+            color: $black;
+            margin-bottom: .2rem !important;
+            @include breakpoint(sm) {
+                font-size: $font-size-35 - 0.4375rem *2; //8px less
+                line-height: $line-height-44 - 0.4375rem *2; //8px less
+                margin-bottom: .6rem !important;
+            }
+            @include breakpoint(md) {
+                font-size: $font-size-35 - 0.4375rem; //8px less
+                line-height: $line-height-44 - 0.4375rem; //8px less
+                margin-bottom: .8rem !important;
+            }
+            @include breakpoint(lg) {
+                font-size: $font-size-35;
+                line-height: $line-height-44;
+                margin-bottom: 1.2rem !important;
+            }
             a {
                 color: #fff;
             }
             @include minbreakpoint(md) {
-                max-width: 50%;
+                max-width: 60%;
             }
         }
         .cus-btn {
@@ -151,17 +223,26 @@ ul.sub-navigation-content {
             border-color: #fff;
             border-radius: 0;
             padding: 10px 20px;
+            @include maxbreakpoint(xs) {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 5px 10px;
+                margin-top: 5px;
+            }
         }
     }
 }
 
 .parallax-sub-title {
-    line-height: 0.5;
+    letter-spacing: 1.56px;
     text-align: center;
     font-size: $font-size-14;
     line-height: $line-height-19;
     font-family: $font-family-montserrat-bold;
-    color: #fff;
+    @include maxbreakpoint(xs) {
+        font-size: 12px;
+        line-height: 16px;
+    }
     span {
         display: inline-block;
         position: relative;
@@ -173,14 +254,26 @@ ul.sub-navigation-content {
             border-bottom: 1px solid white;
             top: 5px;
             width: 60px;
+            @include maxbreakpoint(xs) {
+                width: 20px;
+            }
         }
         &:before {
             right: 100%;
             margin-right: 15px;
+            @include maxbreakpoint(xs) {
+                margin-right: 10px;
+            }
         }
         &:after {
             left: 100%;
             margin-left: 15px;
+            @include maxbreakpoint(xs) {
+                margin-left: 10px;
+            }
+        }
+        a {
+            color: #fff;
         }
     }
 }
@@ -209,14 +302,30 @@ ul.sub-navigation-content {
 .slider-wr .slick-track {
     padding: 65px 0px;
     padding-bottom: 20px;
+    @include maxbreakpoint(sm) {
+        padding: 20px 0px;
+        padding-bottom: 0px;
+    }
 }
 
 .slide.slick-slide.slick-current.slick-active.slick-center {
-    margin-top: -25px;
+    margin-top: -16px;
+    @include breakpoint(sm) {
+        margin-top: -22px;
+    }
+    @include breakpoint(md) {
+        margin-top: -26px;
+    }
+    @include breakpoint(lg) {
+        margin-top: -35px;
+    }
 }
 
 .slide {
     padding: 0 6px;
+    @include maxbreakpoint(sm) {
+        padding: 0 2px;
+    }
     box-sizing: border-box;
 }
 

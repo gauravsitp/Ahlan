@@ -139,7 +139,7 @@ jQuery(document).ready(function() {
     if ($(window).width() < 768) {
         $('.mobile-slider').slick({
             centerMode: true,
-            centerPadding: '25%',
+            centerPadding: '5%',
             slidesToShow: 1,
             autoplay: true,
             autoplaySpeed: 5000,
@@ -155,13 +155,20 @@ jQuery(document).ready(function() {
         centerPadding: '25%',
         slidesToShow: 1,
         speed: 1000,
-        arrows: false
-            // prevArrow: '<button type="button" class="slick-prev"></button>',
-            // nextArrow: '<button type="button" class="slick-next"></button>'
+        arrows: false,
+        responsive: [{
+                breakpoint: 767,
+                settings: {
+                    centerPadding: '10%'
+                }
+            }
+
+        ]
+
     });
 
 
-    $(document).on('init', '.col-md-cus-7', function(event, slick){
+    $(document).on('init', '.col-md-cus-7', function(event, slick) {
         var customSlide = $(event.target).closest('section').find('.slider-cus-thumbnail').find('.custom-slide');
         initialSlideIndex = slick.currentSlide;
         customSlide.eq(initialSlideIndex).addClass('active-slide');
@@ -177,15 +184,15 @@ jQuery(document).ready(function() {
         autoplaySpeed: 3000
     });
 
-    $(document).on('afterChange', '.col-md-cus-7', function(event, slick, current){
+    $(document).on('afterChange', '.col-md-cus-7', function(event, slick, current) {
         var customSlide = $(event.target).closest('section').find('.slider-cus-thumbnail').find('.custom-slide');
         customSlide.removeClass('active-slide')
         customSlide.eq(current).addClass('active-slide');
     });
 
-    $(document).on('click', '.slider-cus-thumbnail .custom-slide', function(){
+    $(document).on('click', '.slider-cus-thumbnail .custom-slide', function() {
         var currentIndex = $(this).index();
-    
+
         $(event.target).closest('section').find('.col-md-cus-7').slick('slickGoTo', currentIndex);
     });
 });

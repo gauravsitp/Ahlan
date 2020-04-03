@@ -170,48 +170,75 @@
 
 .also-like {
     padding: 3rem 0;
+    @include maxbreakpoint(xs) {
+        padding: 0 0;
+        padding-top: 1.2rem;
+    }
     position: relative;
-
-    &:before, &:after{
-        content:"";
+    &:before,
+    &:after {
+        content: "";
         display: block;
         width: 100%;
         position: absolute;
-        top:0;
-        z-index: -1;        
+        top: 0;
+        z-index: -1;
     }
-
-    &:before{
+    &:before {
         background-color: $white;
-        height:50%;
-    }
-
-    &:after{
-        top:50%;
-        height:10px;
-        margin-top:-10px;
-        @include border-radius(55%);
-        @include box-shadow(0 10px 10px 0 rgba(0,0,0,0.05));   
-    }
-
-    &-inverse{
-        &:before{
-            top:50%;
-        }
-
-        &:after{
-            top:50%;
-            margin-top:0;
-            @include box-shadow(0 -10px 10px 0 rgba(0,0,0,0.05));  
+        height: 50%;
+        @include maxbreakpoint(xs) {
+            z-index: -1;
+            position: absolute;
+            left: 10%;
+            top: 46%;
+            width: 80%;
+            border-radius: 20%;
+            box-shadow: 0 0px 30px rgba(132, 132, 132, 0.8);
         }
     }
-    
+    &:after {
+        top: 51%;
+        height: 10px;
+        margin-top: -10px;
+        border: none;
+        left: 5%;
+        width: 90%;
+        background: transparent;
+        border-radius: 55%;
+        box-shadow: 0 10px 20px 0 rgba(199, 199, 199, 0.6);
+        @include maxbreakpoint(xs) {
+            content: none;
+        }
+    }
+    &-inverse {
+        &:before {
+            top: 50%;
+        }
+        &:after {
+            top: 50%;
+            margin-top: 0;
+            @include box-shadow(0 10px 20px 0 rgba(199, 199, 199, 0.6));
+        }
+    }
     @include breakpoint(sm) {
         background-position: center -12rem;
     }
     background-position: center -15rem;
     @include maxbreakpoint(xs) {
-        background-position: bottom;
+        background: #fdfdfd;
+        position: relative;
+        margin-bottom: 30px;
+        .col-md-4 {
+            padding: 0px 4px;
+            .cus-small-two-title {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .cus-date {
+                font-size: 8px;
+            }
+        }
     }
 }
 

@@ -3,7 +3,7 @@
         .bottom-content {
             color: white;
             z-index: 2;
-            background: #f2f2f6;
+            background: #f4f4f7;
             position: absolute;
             bottom: 0;
             max-width: 90%;
@@ -38,6 +38,47 @@
                     padding: 0 70px;
                     padding-top: .5rem;
                     margin-bottom: .6rem;
+                }
+            }
+        }
+    }
+    
+    .section-celebrity {
+        .big-main-image {
+            .bottom-content {
+                max-width: 90%;
+                margin-bottom: -3rem;
+                // @include breakpoint(md) {
+                //     max-width: 90%;
+                // }
+                @include breakpoint(lg) {
+                    max-width: 90%;
+                }
+                // @include maxbreakpoint(xs) {
+                //     margin-bottom: -3.3rem;
+                // }
+                .cus-content {
+                    padding: 0 5px;
+                    padding-top: 5px;
+                    @include breakpoint(md) {
+                        padding: 0 20px;
+                        padding-top: 2px;
+                    }
+                    @include breakpoint(lg) {
+                        padding: 0 70px;
+                        padding-top: 5px;
+                    }
+                    @include maxbreakpoint(xs) {
+                        .cus-md-title {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+            @include maxbreakpoint(sm) {
+                .mb-7 {
+                    margin-bottom: 4rem !important;
                 }
             }
         }
