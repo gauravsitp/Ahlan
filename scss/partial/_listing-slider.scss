@@ -445,7 +445,7 @@ $nav-btn-color: #262626;
                 position: absolute;
                 left: 20px;
                 text-align: left;
-                width: 0;
+                width: 50%;
                 top: 15px;
                 font-size: 30px;
                 @media (max-width: 1600px) {
@@ -469,11 +469,14 @@ $nav-btn-color: #262626;
                     position: absolute;
                     right: 20px;
                     text-align: right;
-                    width: 0;
+                    width: 50%;
                     top: 15px;
                     font-size: 30px;
                     left: inherit;
                     direction: rtl;
+                    a {
+                        color:#7EC6DB;
+                    }
                     @media (max-width: 1600px) {
                         font-size: 25px;
                     }

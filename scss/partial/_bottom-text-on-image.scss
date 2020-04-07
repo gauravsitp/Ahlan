@@ -13,6 +13,9 @@
             @include breakpoint(lg) {
                 max-width: 70%;
             }
+            // @include maxbreakpoint(xs) {
+            //     position: static;                
+            // }
             text-align: center;
             right: 0;
             left: 0;
@@ -20,9 +23,6 @@
             margin: 0 50px;
             margin: 0 auto;
             margin-bottom: -3.3rem;
-            // @include maxbreakpoint(xs) {
-            //     margin-bottom: -3.3rem;
-            // }
             .cus-content {
                 background: $gray-light-body;
                 display: inline-block;

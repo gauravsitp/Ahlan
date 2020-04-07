@@ -1,0 +1,95 @@
+            .custom-newsletter .modal-lg {
+                @include breakpoint(sm) {}
+                @include breakpoint(md) {}
+                @include breakpoint(lg) {
+                    max-width: 694px;
+                }
+                .newsletter-title {
+                    font-size: $font-size-24;
+                    line-height: 1.1875rem;
+                    @include breakpoint(sm) {
+                        font-size: 1.25rem;
+                        line-height: 1.625rem;
+                    }
+                    @include maxbreakpoint(xs) {
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+                    font-family: $font-family-merriweather-black-italic;
+                }
+                .newsletter-lead-text {
+                    font-size: $font-size-12;
+                    line-height: $line-height-31;
+                    font-family: $font-family-montserrat;
+                    margin-bottom: 34px;
+                    @include maxbreakpoint(sm) {
+                        margin-bottom: 15px;
+                    }
+                    @include maxbreakpoint(xs) {
+                        font-size: 10px;
+                        line-height: 20px;
+                    }
+                }
+                .newsletter-footer {
+                    width: 470px;
+                    @include maxbreakpoint(sm) {
+                        width: 100%;
+                    }
+                }
+                .modal-footer {
+                    justify-content: center;
+                    text-align: center;
+                    border-top: 0;
+                    padding: 40px 0 30px;
+                    @include maxbreakpoint(sm) {
+                        padding: 20px 20px 20px;
+                    }
+                }
+                .modal-header {
+                    min-height: 150px;
+                    @include breakpoint(sm) {
+                        min-height: 180px;
+                    }
+                    @include breakpoint(md) {
+                        min-height: 284px;
+                    }
+                    @include breakpoint(lg) {
+                        min-height: 246px;
+                    }
+                    border-bottom: 0;
+                    background-image: url("/sites/all/themes/ahlan_revamp/images/newsletter-bg.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    border-radius: 0;
+                    background-clip: padding-box;
+                }
+                .modal-content {
+                    border-radius: 0;
+                    border: none;
+                    border-radius: 0;
+                    border: none;
+                    background-color: #f7f7f7;
+                    box-shadow: none;
+                }
+                .newsletter-contetn {
+                    .input-group {
+                        span,
+                        .form-control {
+                            background-color: #f7f7f7;
+                        }
+                    }
+                }
+                button.close {
+                    opacity: 1;
+                }
+                button.close:focus {
+                    outline: none;
+                }
+            }
+            
+            .modal-backdrop {
+                backdrop-filter: blur(10px);
+                background-color: #f4f4f7;
+                opacity: .8;
+            }

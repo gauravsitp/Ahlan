@@ -139,13 +139,21 @@ jQuery(document).ready(function() {
     if ($(window).width() < 768) {
         $('.mobile-slider').slick({
             centerMode: true,
-            centerPadding: '5%',
+            centerPadding: '25%',
             slidesToShow: 1,
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 1000,
             cssEase: 'linear',
-            arrows: false
+            arrows: false,
+            responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        centerPadding: '23%'
+                    }
+                }
+
+            ]
 
         });
     }

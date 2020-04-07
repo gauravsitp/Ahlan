@@ -32,7 +32,13 @@
 
 @include breakpoint(lg) {
     .header-transparent {
-        height: 450px;
+        height: 530px;
+    }
+}
+
+@include breakpoint(xlg) {
+    .header-transparent {
+        height: 730px;
     }
 }
 
@@ -83,7 +89,7 @@ ul.sub-navigation-content {
                 padding: 10px 20px 10px 20px;
             }
             @include maxbreakpoint(xs) {
-                padding: 10px 10px 10px 10px;
+                padding: 10px 16px 10px 16px;
             }
             display: inline-block;
             position: relative;
@@ -129,6 +135,18 @@ ul.sub-navigation-content {
 .celebrity-news-slider-bg,
 .event-gallery-slider-bg {
     background-image: url(/sites/all/themes/ahlan_revamp/images/celebrity-news.png);
+}
+
+.foodie-news-slider-bg {
+    background-image: url(/sites/all/themes/ahlan_revamp/images/foodienews.png);
+}
+
+.style-slider-bg {
+    background-image: url(/sites/all/themes/ahlan_revamp/images/style-news.png);
+}
+
+.getaways-slider-bg {
+    background-image: url(/sites/all/themes/ahlan_revamp/images/getaways-news.png);
 }
 
 @include maxbreakpoint(xs) {
@@ -186,8 +204,8 @@ ul.sub-navigation-content {
     }
     .thumb-content {
         .overlay-title {
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
             font-family: $font-family-merriweather-bold;
             color: $black;
             margin-bottom: .2rem !important;
@@ -291,6 +309,9 @@ ul.sub-navigation-content {
 
 .slide .big-main-image {
     transform: scale(0.9);
+    @include maxbreakpoint(xs) {
+        transform: scale(0.95)
+    }
     transition: all 1s ease-out;
     max-width: 100%;
     position: relative;
@@ -317,7 +338,7 @@ ul.sub-navigation-content {
         margin-top: -26px;
     }
     @include breakpoint(lg) {
-        margin-top: -35px;
+        margin-top: -30px;
     }
 }
 
@@ -331,6 +352,9 @@ ul.sub-navigation-content {
 
 .slide.slick-center .big-main-image {
     transform: scale(1.1);
+    @include maxbreakpoint(xs) {
+        transform: scale(1);
+    }
     transform-origin: bottom;
     margin-top: 5px;
     transition: all 1s ease-out;

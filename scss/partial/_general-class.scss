@@ -131,8 +131,8 @@ section.addvertisement {
             margin-bottom: .6rem;
         }
         .cus-small-title {
-            font-size: 1rem;
-            line-height: 1.3125rem;
+            font-size: 14px;
+            line-height: 18px;
             padding: 0 5px;
         }
     }
@@ -161,6 +161,14 @@ section.addvertisement {
 .cus-lead-title {
     font-family: $font-family-merriweather-light-italic;
     color: #9F9F9F;
+    @include breakpoint(sm) {
+        font-size: $font-size-32 - 0.4375rem*2; //8px less;
+        line-height: $line-height-44 - 0.4375rem*2; //8px less;
+    }
+    @include breakpoint(md) {
+        font-size: $font-size-32 - 0.4375rem; //8px less;
+        line-height: $line-height-44 - 0.4375rem; //8px less;
+    }
     // font-weight: normal;
     @include breakpoint(lg) {
         font-size: $font-size-32;
@@ -177,12 +185,13 @@ section.addvertisement {
     display: block;
     @include maxbreakpoint(xs) {
         font-size: 10px;
+        margin-top: 5px;
     }
 }
 
 .cus-small-two-title {
-    font-size: $font-size-22 - .375rem;
-    line-height: $line-height-31 - .625rem;
+    font-size: 14px;
+    line-height: 18px;
     font-family: $font-family-merriweather-bold;
     @include breakpoint(sm) {
         font-size: 1rem;
@@ -229,9 +238,9 @@ section.addvertisement {
 .icon-center {
     .center-icon {
         // background: #f2f2f6;
-        &.term-people-events {
-            background-image: url(/sites/all/themes/ahlan_revamp/images/white-shadow.png);
-        }
+        // &.term-people-events {
+        //     background-image: url(/sites/all/themes/ahlan_revamp/images/white-shadow.png);
+        // }
         &.term-here-now {
             background-image: url(/sites/all/themes/ahlan_revamp/images/here-now.png);
         }
@@ -247,13 +256,32 @@ section.addvertisement {
         &.term-stars-stories {
             background-image: url(/sites/all/themes/ahlan_revamp/images/star-stories.png);
         }
-        &.travel-getaways {
+        &.term-travel-getaways {
             background-image: url(/sites/all/themes/ahlan_revamp/images/travel-getaways.png);
         }
-        &.here-now-white {
-            background-color: transparent;
-            background-image: url(http://localhost/ahlan/html/assets/img/here-now-white.png);
+        // css for white icons
+        &.term-here-now.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-here-now.png);
         }
+        &.term-food-drinks.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-food-drink.png);
+        }
+        &.term-life-style.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-life-style.png);
+        }
+        &.term-lists-more.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-list-more.png);
+        }
+        &.term-stars-stories.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-star-stories.png);
+        }
+        &.term-travel-getaways.white-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/white-travel-getaways.png);
+        }
+        // &.here-now-white {
+        //     background-color: transparent;
+        //     background-image: url(http://localhost/ahlan/html/assets/img/here-now-white.png);
+        // }
         &.large-icon {
             //padding: 0 10px;
             width: 21px;
@@ -304,7 +332,7 @@ section.addvertisement {
 }
 
 .main-overlay .trns-bg {
-    background: transparent !important;
+    background-color: transparent !important;
 }
 
 .icon-center {
