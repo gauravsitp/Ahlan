@@ -88,8 +88,8 @@
                 }
             }
             
-            .modal-backdrop {
-                backdrop-filter: blur(10px);
+            .modal-backdrop.show {
+                backdrop-filter: blur(20px);
                 background-color: #f4f4f7;
-                opacity: .8;
+                opacity: .8 !important;
             }
