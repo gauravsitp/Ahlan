@@ -138,6 +138,7 @@
 =            navigation            =
 ==================================*/
 
+
 .ahlan-menu {
     z-index: 999;
     border-bottom: 1px solid #E5E3E3;
@@ -725,6 +726,9 @@ header.transparent-bg {
             .nav-item {
                 .nav-link {
                     color: #fff;
+                    @media screen and (max-width: 991px) {
+                        color: #000;
+                    }
                 }
                 .dropdown-menu{
                     .submenu{
@@ -766,4 +770,38 @@ header.transparent-bg {
         color: #000;
         a {color:#000;}
     }
+}
+
+@media screen and (max-width: 991px) {
+    .transparent-bg {
+        .navbar-brand {
+            background: none !important;
+        }
+        .hamburger {
+            background: #fff !important;
+        &:before,
+        &:after {
+            background: #fff !important;
+        }
+        }
+        .bottom-collapse.active {
+            .hamburger {
+                background: #000 !important;
+            &:before,
+            &:after {
+                background: #000 !important;
+            }
+            }
+        }
+        &.smaller-header {
+            .hamburger {
+                background: #000 !important;
+            &:before,
+            &:after {
+                background: #000 !important;
+            }
+            }
+        }
+    }
+    
 }
