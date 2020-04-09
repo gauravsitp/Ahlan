@@ -178,6 +178,32 @@
     }
     .navbar-nav {
         .nav-item {
+            > .nav-link{
+                &:after{
+                    display: block;
+                    content: "";
+                    background-color: $black;
+                    height: 3px;
+                    position: absolute;
+                    bottom: -1px;
+                    width: 0;
+                    z-index: -1;
+                    border:0;
+                    margin:0;
+                    left:50%;
+                    right:50%;
+                    @include transition(all .2s ease-in-out);                    
+                }
+            
+                &:hover, .active{
+                    &:after{
+                        left:0;
+                        right:0;
+                        width: 100%;
+                    }                    
+                }
+            }
+
             .nav-link {
                 color: #0A0A0A;
                 padding: 20px 20px;
