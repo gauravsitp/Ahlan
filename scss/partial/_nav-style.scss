@@ -137,6 +137,18 @@
 /*==================================
 =            navigation            =
 ==================================*/
+@media screen and (min-width: 992px) {
+    .transparent-bg{
+        .dropdown {
+            .term-here-now:before { background: url($icon-path+'icon1-wh.svg') no-repeat center !important; }
+            .term-stars-stories:before { background: url($icon-path+'icon2-wh.svg') no-repeat center !important; }
+            .term-food-drinks:before { background: url($icon-path+'icon3-wh.svg') no-repeat center !important; }
+            .term-life-style:before { background: url($icon-path+'icon4-wh.svg') no-repeat center !important; }
+            .term-travel-getaways:before { background: url($icon-path+'icon5-wh.svg') no-repeat center !important; }
+            .term-lists-more:before { background: url($icon-path+'icon6-wh.svg') no-repeat center !important; }
+        }
+    }
+}
 
 
 .ahlan-menu {
