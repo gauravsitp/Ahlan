@@ -1,6 +1,7 @@
 .header-transparent-title {
-    font-family: $font-family-merriweather-bold-italic;
-    font-size: 65px;
+    font-family: "merriweather-bold-italic";
+    font-size: 30px;
+    line-height: 20px;
     position: absolute;
     left: 0;
     right: 0;
@@ -8,8 +9,20 @@
     display: block;
     text-align: center;
     bottom: 0;
-    color: $white;
-    line-height: 45px;
+    color: #f4f4f7;
+    z-index: 1;
+    @include breakpoint(sm) {
+        font-size: 40px;
+        line-height: 28px;
+    }
+    @include breakpoint(md) {
+        font-size: 55px;
+        line-height: 40px;
+    }
+    @include breakpoint(lg) {
+        font-size: 65px;
+        line-height: 45px;
+    }
 }
 
 .contact-details {
@@ -18,37 +31,43 @@
         font-size: 18px;
         font-weight: 600;
         margin: 0;
-        line-height: 20px;
+        line-height: 24px;
         text-transform: uppercase;
+        font-family: $font-family-montserrat-semibold;
     }
     i {
         font-size: 16px;
         color: #939393;
-        font-family: $font-family-merriweather-bold-italic;
+        font-family: $font-family-merriweather-light-italic;
+        line-height: 32px;
     }
     em {
         font-size: 16px;
         color: #939393;
+        line-height: 32px;
         font-style: normal;
         margin: 5px 0;
         display: block;
+        font-family: $font-family-montserrat;
     }
     p {
         font-size: 16px;
+        line-height: 32px;
         font-weight: 600;
         margin: 0;
+        font-family: $font-family-montserrat;
     }
     div.icon-center {
         position: relative;
         display: block;
-        width: 140px;
+        width: 90px;
         margin: auto;
         margin-top: 5px;
         margin-bottom: 5px;
         &:before {
             content: "";
             position: absolute;
-            width: 50px;
+            width: 30px;
             height: 1px;
             background-color: #000;
             left: 0;
@@ -57,7 +76,7 @@
         &:after {
             content: "";
             position: absolute;
-            width: 50px;
+            width: 30px;
             height: 1px;
             background-color: #000;
             right: 0;
@@ -74,4 +93,15 @@
             margin: 20px auto;
         }
     }
+}
+
+.contact-newsletter h3 {
+    font-size: 25px;
+    line-height: 53px;
+    margin: 0;
+    font-family: $font-family-merriweather-black-italic;
+}
+
+.contact-newsletter p {
+    font-size: 12px;
 }
