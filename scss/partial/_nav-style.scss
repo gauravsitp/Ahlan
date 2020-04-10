@@ -512,10 +512,9 @@ header {
 .mobile-menu {
     display: none;
     @media (max-width: 991px) {
-        display: inline-block;
+        display: block;
         list-style: none;
         margin: 0;
-        width: 100%;
         padding: 15px 30px 5px 55px;
         border-top: 1px solid rgba(180, 180, 180, 0.25);
         li {
@@ -547,26 +546,17 @@ header {
         z-index: 9;
         display: block;
         height: 100%;
-        width: 100px;
     }
     .bottom-collapse {
         opacity: 0;
-        transform: translate(0%, 0%);
-        -webkit-transition: 0.1s ease-in-out;
-        -moz-transition: 0.1s ease-in-out;
-        -ms-transition: 0.1s ease-in-out;
-        -o-transition: 0.1s ease-in-out;
+        transform: translate(0%,0%);
         transition: 0.1s ease-in-out;
         visibility: hidden;
-        z-index: 99999;        
-        position: fixed;
-        width: 100%;
+        z-index: 99999;
         height: 0;
         background: #f1f1f5;
-        left: 0;        
-        top: 0;
-        padding: 0;
         box-sizing: border-box;
+        
         .nav-item.dropdown {
             border-top: 1px solid rgba(180, 180, 180, 0.25);
             padding: 0 30px 0 55px;
