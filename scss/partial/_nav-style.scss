@@ -108,7 +108,6 @@
         font-size: 22px;
         @include box-shadow(none);
         @include border-radius(0);
-
         
         &:focus {
             @include box-shadow(none);
@@ -451,6 +450,10 @@ header {
     }
     
     @media screen and (max-width: 991px) {
+
+        .region-header-right{
+            width:100%;
+        }
        
         &.smaller-header {
             position: fixed;
