@@ -46,7 +46,7 @@
                     }
                 }
                 .modal-header {
-                    min-height: 150px;
+                    min-height: 176px;
                     @include breakpoint(sm) {
                         min-height: 180px;
                     }
@@ -69,14 +69,14 @@
                     border: none;
                     border-radius: 0;
                     border: none;
-                    background-color: #f7f7f7;
+                    background-color: #fff;
                     box-shadow: none;
                 }
                 .newsletter-contetn {
                     .input-group {
                         span,
                         .form-control {
-                            background-color: #f7f7f7;
+                            background-color: #fff;
                         }
                     }
                 }

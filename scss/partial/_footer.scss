@@ -72,8 +72,8 @@ footer {
                 cursor: pointer;
                 border: none;
                 background-position: center;
-                width: 47px;
-                height: 46px;
+                width: 45px;
+                height: 44px;
             }
         }
     }
@@ -204,7 +204,13 @@ footer i {
 
 input.form-control::placeholder {
     font-size: $font-size-10;
-    line-height: $line-height-13;
+    line-height: 46px;
+    font-family: $font-family-montserrat;
+}
+
+input.form-control::-ms-input-placeholder {
+    font-size: $font-size-10;
+    line-height: 46px;
     font-family: $font-family-montserrat;
 }
 

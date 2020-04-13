@@ -1,0 +1,317 @@
+    .competion-page {
+        .cmp-image {
+            .bottom-content {
+                left: calc(100% - 92.3%);
+                padding-left: .5rem;
+                @include breakpoint(sm) {
+                    left: -1px;
+                }
+                @include maxbreakpoint(xs) {
+                    left: -1px;
+                }
+            }
+        }
+        .cmp-main-content {
+            .section-lead-text {
+                margin: 35px 0 40px 0;
+                margin-top: 1rem;
+            }
+            .cmp-image {
+                .cls-date {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #a70000;
+                    letter-spacing: .36px;
+                    font-family: $font-family-montserrat;
+                    text-transform: uppercase;
+                    @include maxbreakpoint(xs) {
+                        line-height: normal;
+                        font-size: 8px;
+                    }
+                }
+                .icon-center {
+                    margin-bottom: 0;
+                }
+            }
+            .cmp-text-main-content {
+                .prize {
+                    font-size: 24px;
+                    line-height: 1.54;
+                    font-family: $font-family-montserrat-semibold;
+                }
+                .hurry-up {
+                    font-size: 16px;
+                    line-height: 1.31;
+                    letter-spacing: 0.48px;
+                    font-family: $font-family-montserrat;
+                    span {
+                        color: #a70000;
+                        margin-right: 5px;
+                    }
+                }
+                .article-form {
+                    border: solid 0.5px #c7c7c7;
+                    background-color: #ffffff;
+                    width: 715px;
+                    padding: 22px 22px 26px;
+                    margin: 60px 0;
+                    margin-bottom: 20px;
+                    @include maxbreakpoint(xs) {
+                        width: 100%;
+                    }
+                }
+                .form-head {
+                    text-align: center;
+                    h3 {
+                        font-size: 30px;
+                        line-height: 1.23;
+                        color: #000000;
+                        text-transform: uppercase;
+                        font-family: $font-family-montserrat-semibold;
+                        @include maxbreakpoint(xs) {
+                            font-size: 18px;
+                            line-height: normal;
+                        }
+                    }
+                    p {
+                        font-size: 20px;
+                        line-height: 45px;
+                        font-family: $font-family-montserrat;
+                        @include maxbreakpoint(xs) {
+                            font-size: 12px;
+                            line-height: normal;
+                        }
+                    }
+                }
+                .form-body {
+                    display: flex;
+                    flex-direction: row;
+                    @include maxbreakpoint(xs) {
+                        flex-direction: column;
+                    }
+                    .social-login-option,
+                    .form-login-option {
+                        max-width: 285px;
+                        flex: 2;
+                        @include maxbreakpoint(xs) {
+                            margin-top: 20px;
+                        }
+                    }
+                    .wrapper-part {
+                        position: relative;
+                        max-width: 100px;
+                        flex: 1;
+                        margin: 10px;
+                        @include maxbreakpoint(xs) {
+                            max-width: 100%;
+                        }
+                    }
+                    .line {
+                        position: absolute;
+                        left: 49%;
+                        top: 0;
+                        bottom: 0;
+                        width: 1px;
+                        background: #ccc;
+                        z-index: 1;
+                        @include maxbreakpoint(xs) {
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 1px;
+                        }
+                    }
+                    .wordwrapper {
+                        text-align: center;
+                        height: 12px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -12px;
+                        z-index: 2;
+                    }
+                    .word {
+                        color: #242424;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        padding: 3px;
+                        font-size: 20px;
+                        background: #fff;
+                        line-height: 45px;
+                        font-family: $font-family-montserrat;
+                        @include maxbreakpoint(xs) {
+                            line-height: 21px;
+                            width: 40px;
+                            margin: 0 auto;
+                        }
+                    }
+                    .facebook-lg,
+                    .google-lg,
+                    .twitter-lg,
+                    .lnkdn-lg,
+                    .password-lg,
+                    .email-lg {
+                        margin-bottom: 20px;
+                        span.form-control {
+                            border-right: 0;
+                            box-shadow: none;
+                            height: 46px;
+                            font-size: 13px;
+                            line-height: 17px;
+                            letter-spacing: 0.26px;
+                            color: #000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-family: $font-family-montserrat;
+                        }
+                        input.form-control {
+                            font-size: 12px!important;
+                            line-height: 16px !important;
+                            color: #aaaaaa;
+                            font-family: $font-family-montserrat;
+                            // border-right: 0;
+                            box-shadow: none;
+                            height: 46px;
+                            letter-spacing: 0.26px;
+                        }
+                        .input-group-prepend {
+                            span {
+                                width: 46px;
+                                height: 46px;
+                                border-radius: 0;
+                                background-color: #4268b3;
+                                color: #fff;
+                                margin: 0 auto;
+                                text-align: center;
+                                border: 0;
+                                i {
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                        .input-group-append {
+                            span {
+                                text-align: center;
+                                width: 46px;
+                                height: 46px;
+                                background: transparent;
+                                border-left: 0;
+                                border-radius: 0;
+                                i {
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                         ::-webkit-input-placeholder {
+                            font-size: 12px!important;
+                            line-height: 16px !important;
+                            color: #aaaaaa;
+                            font-family: $font-family-montserrat;
+                        }
+                         ::-moz-placeholder {
+                            font-size: 12px!important;
+                            line-height: 16px !important;
+                            color: #aaaaaa;
+                            font-family: $font-family-montserrat;
+                        }
+                    }
+                    .google-lg {
+                        .input-group-prepend {
+                            span {
+                                background-color: #dc4334;
+                            }
+                        }
+                    }
+                    .twitter-lg {
+                        .input-group-prepend {
+                            span {
+                                background-color: #44bbeb;
+                            }
+                        }
+                    }
+                    .lnkdn-lg {
+                        .input-group-prepend {
+                            span {
+                                background-color: #0277b5;
+                            }
+                        }
+                    }
+                    .email-lg,
+                    .password-lg {
+                        .input-group-prepend {
+                            span {
+                                border: 1px solid #ced4da;
+                                background-color: transparent;
+                                color: #242424;
+                            }
+                        }
+                        .input-group-append {
+                            span {
+                                background-color: #242424;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .password-lg {
+                        margin-bottom: 12px;
+                    }
+                    .form-login-option {
+                        .submit-button {
+                            input {
+                                width: 100%;
+                                height: 46px;
+                                background-color: #242424;
+                                color: #fff;
+                                border: none;
+                                padding: 0;
+                                letter-spacing: 0.32px;
+                                font-size: 16px;
+                                line-height: 21px;
+                                font-family: $font-family-montserrat;
+                                cursor: pointer;
+                            }
+                        }
+                        p {
+                            margin-bottom: 20px;
+                            small {
+                                font-size: 12px;
+                                line-height: 16px;
+                                letter-spacing: 0.24px;
+                                color: #000;
+                                font-family: $font-family-montserrat;
+                                a {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        p.text-bottom {
+                            letter-spacing: 0.22px;
+                            font-size: 11px;
+                            line-height: 15px;
+                            color: #000;
+                            margin-top: 30px;
+                            font-family: $font-family-montserrat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    p.privacy-policy {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.36;
+        letter-spacing: 0.28px;
+        color: #000000;
+        font-family: $font-family-montserrat;
+        a {
+            text-decoration: underline;
+        }
+    }
+    
+    .mb-6 {
+        margin-bottom: 6rem !important;
+    }

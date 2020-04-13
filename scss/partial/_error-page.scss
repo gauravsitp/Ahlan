@@ -1,7 +1,17 @@
 .error-page {
-    img {width:40%;}
-    h4 {font-size: $font-size-28; font-family: $font-family-montserrat-semibold;}
-    p {font-size: $font-size-22; font-family: $font-family-merriweather-light-italic; color: #9f9f9f; line-height: 1.32}
+    img {
+        width: 40%;
+    }
+    h4 {
+        font-size: $font-size-28;
+        font-family: $font-family-montserrat-semibold;
+    }
+    p {
+        font-size: $font-size-22;
+        font-family: $font-family-merriweather-light-italic;
+        color: #9f9f9f;
+        line-height: 1.32
+    }
     a.go-home {
         background: #000;
         width: auto;
@@ -14,6 +24,26 @@
         margin-top: 10px;
         font-family: $font-family-montserrat;
         letter-spacing: 2.2px;
-        font-size: $font-size-12; 
+        font-size: $font-size-12;
     }
+}
+
+.section-new-404-page footer {
+    background-color: #f4f4f7;
+}
+
+.section-new-404-page footer .ft-logo img {
+    background-color: #f4f4f7;
+}
+
+.section-new-404-page footer .form-control {
+    background-color: #f4f4f7;
+}
+
+.section-new-404-page footer .newsletter-footer .input-group .input-group-prepend .input-group-text {
+    background-color: #f4f4f7;
+}
+
+.section-new-404-page footer .sc-icon ul li {
+    background-color: #f4f4f7;
 }
