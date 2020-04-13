@@ -1,5 +1,24 @@
+// footer {
+//     background: #fff;
+// }
 footer {
-    background: #fff;
+    background-color: #f4f4f7;
+}
+
+footer .ft-logo img {
+    background-color: #f4f4f7;
+}
+
+footer .form-control {
+    background-color: #f4f4f7;
+}
+
+footer .newsletter-footer .input-group .input-group-prepend .input-group-text {
+    background-color: #f4f4f7;
+}
+
+footer .sc-icon ul li {
+    background-color: #f4f4f7;
 }
 
 .bck-line:before {
@@ -221,6 +240,23 @@ input.form-control::-ms-input-placeholder {
 .disclamier p,
 .term-policy ul {
     margin: 0;
+}
+
+.disclamier {
+    text-align: center;
+}
+
+.disclamier p {
+    margin-left: 0px;
+    @include breakpoint(md) {
+        margin-left: 70px;
+    }
+    @include breakpoint(sm) {
+        margin-left: 70px;
+    }
+    @include breakpoint(lg) {
+        margin-left: 230px;
+    }
 }
 
 @include maxbreakpoint(xs) {

@@ -49,14 +49,14 @@ section.addvertisement {
 
 .pd-r {
     padding-right: 1.4375rem;
-    @include maxbreakpoint(xs) {
+    @include maxbreakpoint(md) {
         padding-right: 8px;
     }
 }
 
 .pd-l {
     padding-left: 1.4375rem;
-    @include maxbreakpoint(xs) {
+    @include maxbreakpoint(md) {
         padding-left: 8px;
     }
 }
@@ -259,6 +259,9 @@ section.addvertisement {
         &.term-travel-getaways {
             background-image: url(/sites/all/themes/ahlan_revamp/images/travel-getaways.png);
         }
+        &.default-icon {
+            background-image: url(/sites/all/themes/ahlan_revamp/images/default.png);
+        }
         // css for white icons
         &.term-here-now.white-icon {
             background-image: url(/sites/all/themes/ahlan_revamp/images/white-here-now.png);
@@ -402,4 +405,13 @@ section.addvertisement {
             display: block;
         }
     }
+}
+
+.listing-slider {
+    margin-top: 0 !important;
+}
+
+.listing-slider .section-footer {
+    margin: 0 !important;
+    padding: 0 !important;
 }
