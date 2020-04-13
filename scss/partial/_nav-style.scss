@@ -396,7 +396,10 @@
 li.nav-item.dropdown.active .display-no {
     display: none;
 }
-
+.region-header-right{
+    display:flex;
+    align-self: center;
+}
 .head-social {
     display:flex;
     align-self: center;
