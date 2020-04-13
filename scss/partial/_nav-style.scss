@@ -440,9 +440,12 @@ header {
     width: 100%;
     transition: all 0.5s;
 
+    .ahlan-menu {
+        border-bottom: 0 none;
+    }
+
     &.smaller-header {       
         .ahlan-menu {
-            border:none;
             .navbar-brand {
                 background: rgba(241, 241, 245, 0);
             }
@@ -450,6 +453,24 @@ header {
     }
     
     @media screen and (max-width: 991px) {
+        
+        .navbar-brand{
+            padding-right: 49px;
+        }
+
+        .top-logo{
+            position: relative;
+            background-color: #f1f1f5;
+            min-height: 56px;
+        }
+        
+        .mobile-option{
+            display: block;
+        }
+
+        .search-icon{
+            display: none;
+        }
 
         .region-header-right{
             width:100%;
@@ -458,16 +479,14 @@ header {
         &.smaller-header {
             position: fixed;
             top:0;
-
-           .top-logo{
-                background-color: #f1f1f5;
-            }
+           
 
             .navbar-brand{
+                padding-top: 5px;
                 padding-right:100px;
             }
 
-            .mobile-option{
+            .search-icon{
                 display: block;
             }
         }
@@ -486,7 +505,7 @@ header {
     .mobile-option{
         position: absolute;
         right: 0;
-        height:57px;
+        height:100%;
     }
     .mega-canvas-link {
         cursor: pointer;
@@ -502,7 +521,7 @@ header {
         transform-origin: center;
         @include border-radius(0);
 
-        &:focus, &.active {
+        &.active {
             span:first-child{
                 transform: rotateZ(45deg) translateX(8px) translateY(5px);
             }
