@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: $font-family-merriweather-italic;
+    src: url("#{$merriweather-font-path}Merriweather-Italic.ttf") format('truetype');
+}
+
+@font-face {
     font-family: $font-family-merriweather-black;
     src: url("#{$merriweather-font-path}Merriweather-Black.ttf") format('truetype');
 }

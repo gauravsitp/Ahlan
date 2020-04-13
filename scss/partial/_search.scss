@@ -76,22 +76,13 @@
                     &:after {
                         width: 15px;
                         @include breakpoint(sm) {
-                            &:before,
-                            &:after {
-                                width: 15px;
-                            }
+                            width: 15px;
                         }
                         @include breakpoint(md) {
-                            &:before,
-                            &:after {
-                                width: 20px;
-                            }
+                            width: 20px;
                         }
                         @include breakpoint(lg) {
-                            &:before,
-                            &:after {
-                                width: 25px;
-                            }
+                            width: 25px;
                         }
                     }
                 }
@@ -190,7 +181,7 @@
             letter-spacing: 1.86px;
             line-height: 40px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             @include maxbreakpoint(xs) {
                 font-size: 12px;
                 list-height: normal;
@@ -199,15 +190,17 @@
         }
     }
     .result-text {
-        font-family: $font-family-merriweather-light-italic;
-        font-size: 20px;
-        margin-top: 10px;
-        font-weight: bold;
+        font-family: $font-family-merriweather-italic;
+        font-size: 23px;
+        line-height: 14px;
+        margin-top: 20px;
         color: #9f9f9f;
         margin-bottom: 30px;
+        padding: 0 8px;
         @include maxbreakpoint(xs) {
             font-size: 12px;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
     }
     .input-group {
@@ -238,5 +231,12 @@
         @include maxbreakpoint(xs) {
             font-size: 12px!important;
         }
+    }
+}
+
+.facet-customsearch-form-facet-content-pager-wrapper.row {
+    margin-top: 40px;
+    @include maxbreakpoint(xs) {
+        margin-top: 10px;
     }
 }
