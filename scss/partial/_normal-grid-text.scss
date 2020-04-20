@@ -19,7 +19,13 @@
 
 .small-main-img {
     .cus-sm-img {
-        margin-bottom: 1.25rem;
+        margin-bottom: 17px;
+        @include maxbreakpoint(xs) {
+            margin-bottom: 8px;
+        }
+        @include breakpoint(sm) {
+            margin-bottom: 15px;
+        }
     }
     .small-btn-content {
         text-align: center;

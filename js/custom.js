@@ -160,7 +160,7 @@ jQuery(document).ready(function() {
 
     $('.section-slider').slick({
         centerMode: true,
-        centerPadding: '25%',
+        centerPadding: '15%',
         slidesToShow: 1,
         speed: 1000,
         arrows: false,

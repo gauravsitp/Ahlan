@@ -1,0 +1,69 @@
+.home-four-grid {
+    @include breakpoint(lg) {
+        padding-bottom: 4.375rem !important;
+    }
+}
+
+.common-space {
+    @include breakpoint(lg) {
+        padding-top: 4.375rem !important;
+        padding-bottom: 4.375rem !important;
+    }
+}
+
+.trending-slider.common-space {
+    @include breakpoint(lg) {
+        padding-top: calc(4.375rem + 25px) !important;
+    }
+}
+
+.home-one-grid {
+    @include breakpoint(lg) {
+        padding-top: 4.37rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+.home-two-grid .col-md-9 .row,
+.home-three-grid .row {
+    @include breakpoint(lg) {
+        margin-bottom: 2.25rem !important;
+    }
+}
+
+.home-three-grid .row:last-child {
+    @include breakpoint(lg) {
+        margin-bottom: 0 !important;
+    }
+}
+
+.home-padding {
+    padding-bottom: 0rem !important;
+    @include breakpoint(sm) {
+        padding-bottom: 1rem !important;
+    }
+    @include breakpoint(md) {
+        padding-bottom: 1rem !important;
+    }
+    @include breakpoint(lg) {
+        padding-bottom: 17px !important;
+    }
+}
+
+.child-css .col-md-9 .big-main-image.mb-7 {
+    margin-bottom: 27px !important;
+}
+
+.mobile-cs.child-css .col-md-9 .big-main-image.mb-7,
+.child-css .col-md-9 .big-main-image.mb-7:last-child {
+    @include maxbreakpoint(smm) {
+        margin-bottom: 18px !important
+    }
+}
+
+.mobile-cs.child-css.py-5,
+.three-column-bottom.child-css.py-5 {
+    @include maxbreakpoint(smm) {
+        padding-bottom: .5rem !important;
+    }
+}

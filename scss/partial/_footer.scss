@@ -341,6 +341,25 @@ input.form-control::-ms-input-placeholder {
         }
     }
     .d-md-none {
-        border-top: solid 1px #c7c7c7;
+        border-top: solid 1px #efefef;
     }
+}
+
+.ft-main-item.first li:hover a,
+.ft-main-item p:hover a {
+    color: #898989;
+}
+
+.ft-main-item .sub-menu-section li:hover a {
+    color: #242424;
+}
+
+footer .sc-icon ul li:hover i,
+.head-social li:hover a {
+    color: #898989;
+    transition: .5s color;
+}
+
+footer .sc-icon ul li {
+    cursor: pointer;
 }

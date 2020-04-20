@@ -22,7 +22,7 @@
                     line-height: $line-height-31;
                     font-family: $font-family-montserrat;
                     margin-bottom: 34px;
-                    @include maxbreakpoint(sm) {
+                    @include maxbreakpoint(smm) {
                         margin-bottom: 15px;
                     }
                     @include maxbreakpoint(xs) {
@@ -32,7 +32,7 @@
                 }
                 .newsletter-footer {
                     width: 470px;
-                    @include maxbreakpoint(sm) {
+                    @include maxbreakpoint(smm) {
                         width: 100%;
                     }
                 }
@@ -41,7 +41,7 @@
                     text-align: center;
                     border-top: 0;
                     padding: 40px 0 30px;
-                    @include maxbreakpoint(sm) {
+                    @include maxbreakpoint(smm) {
                         padding: 20px 20px 20px;
                     }
                 }

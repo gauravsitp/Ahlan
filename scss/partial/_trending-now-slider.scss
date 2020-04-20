@@ -4,12 +4,12 @@
 //     }
 // }
 .row-cus {
-    @include maxbreakpoint(sm) {
+    @include maxbreakpoint(smm) {
         position: relative;
     }
     .slick-slider {
         .slick-track {
-            @include maxbreakpoint(sm) {
+            @include maxbreakpoint(smm) {
                 text-align: center;
             }
         }
@@ -27,7 +27,7 @@
 .bg-color-dark {
     background: #F2F2F6;
     position: relative;
-    @include maxbreakpoint(sm) {
+    @include maxbreakpoint(smm) {
         position: initial;
         background: #fff;
     }
@@ -40,7 +40,7 @@
         font-size: 1.875rem;
         line-height: 2.375rem;
         letter-spacing: 2.48px;
-        @include maxbreakpoint(sm) {
+        @include maxbreakpoint(smm) {
             font-size: 14px;
             line-height: 17px;
             letter-spacing: 1.04px;
@@ -55,7 +55,7 @@
             border-bottom: solid 2px #979797;
             padding: 4px 8px;
             display: inline-block;
-            @include maxbreakpoint(sm) {
+            @include maxbreakpoint(smm) {
                 border-top: solid 1px #979797;
                 border-bottom: solid 1px #979797;
                 padding: 2px 4px;
@@ -101,7 +101,7 @@
         line-height: $line-height-29;
         font-family: $font-family-montserrat;
         color: #767676;
-        @include maxbreakpoint(sm) {
+        @include maxbreakpoint(smm) {
             color: #d3d3d3;
             line-height: 16px;
             font-size: 12px;
@@ -113,11 +113,12 @@
     display: none;
 }
 
-@include maxbreakpoint(sm) {
+@include maxbreakpoint(smm) {
     .trending-slider {
         padding-top: 2rem !important;
         padding-bottom: 0rem !important;
         position: relative;
+        margin-bottom: 1rem !important;
         &:before {
             content: "";
             width: 100%;
@@ -250,4 +251,8 @@
     .col-md-cus-5 .content p {
         display: block;
     }
+}
+
+.trending-slider {
+    padding-top: calc(3rem + 25px) !important;
 }

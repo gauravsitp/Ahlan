@@ -315,3 +315,41 @@
     .mb-6 {
         margin-bottom: 6rem !important;
     }
+    
+    .element-invisible {
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        overflow: hidden;
+        height: 1px;
+    }
+    
+    .gift-icon {
+        position: absolute;
+        top: 10%;
+        img {
+            @include maxbreakpoint(xs) {
+                width: 60px;
+            }
+            @include breakpoint(sm) {
+                width: 60px;
+            }
+            @include breakpoint(md) {
+                width: 90px;
+            }
+        }
+    }
+    
+    .pane-ahlan-redesign-ahlan-competition-listing .cus-small-title {
+        @include maxbreakpoint(xs) {
+            padding: 0 15px;
+        }
+    }
+    
+    span.cls-date {
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.36px;
+        text-align: center;
+        color: #af0000;
+        margin-right: 3px;
+    }

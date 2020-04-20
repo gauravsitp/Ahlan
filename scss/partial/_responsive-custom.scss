@@ -69,6 +69,11 @@
                 @content
             }
         }
+        @else if ($max-point==smm) {
+            @media (max-width: 991px) {
+                @content
+            }
+        }
         @else if ($max-point==xs) {
             @media (max-width: 767px) {
                 @content
@@ -77,7 +82,12 @@
     }
     
     @mixin minbreakpoint($min-point) {
-        @if ($min-point==md) {
+        @if ($min-point==lg) {
+            @media (min-width: 1750px) {
+                @content
+            }
+        }
+        @else if ($min-point==md) {
             @media (min-width: 992px) {
                 @content
             }
