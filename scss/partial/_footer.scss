@@ -5,8 +5,13 @@ footer {
     background-color: #f4f4f7;
 }
 
-footer .ft-logo img {
+footer .ft-logo {
     background-color: #f4f4f7;
+}
+
+footer .ft-logo img:hover {
+    opacity: .6;
+    transition: all .5s;
 }
 
 footer .form-control {
@@ -43,7 +48,7 @@ footer .sc-icon ul li {
 
 .ft-logo {
     img {
-        background: #fff;
+        // background: #fff;
         margin-top: -15px;
     }
 }
@@ -72,9 +77,15 @@ footer .sc-icon ul li {
     margin: 0 auto;
 }
 
+.subs-msg {
+    position: absolute;
+    width: 100%;
+}
+
 .newsletter-footer {
     width: 370px;
     margin: 16px 0;
+    position: relative;
     .input-group {
         min-height: 45px;
         .input-group-prepend .input-group-text {
@@ -255,7 +266,7 @@ input.form-control::-ms-input-placeholder {
         margin-left: 70px;
     }
     @include breakpoint(lg) {
-        margin-left: 230px;
+        margin-left: 170px;
     }
 }
 
@@ -327,7 +338,7 @@ input.form-control::-ms-input-placeholder {
     }
     footer.pt-7 {
         background: #f4f4f7;
-        padding-top: 1rem !important;
+        padding-top: 0rem !important;
     }
     .d-md-none {
         .ft-logo {

@@ -175,16 +175,25 @@ jQuery(document).ready(function() {
 
     // });
 
-    $('.section-slider').on('init reInit', function(e){
-       
+    $('.section-slider').on('init reInit', function(e) {
+
     }).slick({
-        centerMode:true,
-        variableWidth:true,
-        centerPadding:15,
-        slidesToShow: 3,
-        slidesToScroll:1,
+        centerMode: true,
+        // variableWidth: true,
+        centerPadding: '25%',
+        slidesToShow: 1,
+        slidesToScroll: 1,
         speed: 1000,
-        arrows: false
+        adaptiveHeight: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 767,
+                settings: {
+                    centerPadding: '10%'
+                }
+            }
+
+        ]
     });
 
 
@@ -220,7 +229,7 @@ jQuery(document).ready(function() {
 
 $(document).ready(function() {
     (function($) {
-       
+
         // stickit - shr-soc-mda
         /*
         var header = $('header');

@@ -27,12 +27,6 @@
         @include maxbreakpoint(smm) {
             bottom: 2px;
         }
-        // @include breakpoint(md) {
-        //     padding-bottom: 1rem;
-        // }
-        // @include breakpoint(xs) {
-        //     padding-bottom: 1.25rem;
-        // }
         left: 0;
         right: 0;
         pointer-events: none;
@@ -48,12 +42,12 @@
                 margin-bottom: .2rem;
             }
             @include breakpoint(md) {
-                font-size: $font-size-20 - 0.125;
-                line-height: $line-height-24 - 0.125;
+                font-size: 16px;
+                line-height: 23px;
             }
             @include breakpoint(lg) {
-                font-size: $font-size-20;
-                line-height: $line-height-24;
+                font-size: 16px;
+                line-height: 23px;
                 margin-bottom: .2rem;
             }
             // @include minbreakpoint(md) {
@@ -147,19 +141,19 @@
 //     background: transparent;
 // }
 .zoom-effect {
-    // overflow: hidden;
+    overflow: hidden;
     position: relative;
     img {
-        // transition-property: transform, opacity;
-        // transition-duration: .5s;
-        // transition-timing-function: ease-in;
-        transition: opacity .2s ease-in-out
+        transition-property: transform, opacity;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out;
+        // transition: opacity .2s ease-in-out
     }
-    // &:hover {
-    //     img {
-    //         transform: scale3d(1.08, 1.08, 1);
-    //     }
-    // }
+    &:hover {
+        img {
+            transform: scale3d(1.08, 1.08, 1);
+        }
+    }
     a {
         transition: all 100ms linear !important;
     }

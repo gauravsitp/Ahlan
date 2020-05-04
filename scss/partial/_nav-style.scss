@@ -82,6 +82,7 @@
         border: 1px solid #c4c4c4;
         box-shadow: none;
         font-size: 22px;
+        padding-left: 25px;
     }
     .form-control:focus,
     .input-group-text:focus {
@@ -102,32 +103,44 @@
         letter-spacing: normal;
         text-align: left;
         color: #9f9f9f;
-        margin: 5px 0 0 10px;
+        margin: 5px 0 0 25px;
     }
 }
 
 .search-wrapper ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #777777;
-    font-size: 17px!important;
+    color: #aaaaaa;
+    font-size: 20px !important;
+    font-family: $font-family-montserrat !important;
+    letter-spacing: 0.8px !important;
+    font-weight: 600;
 }
 
 .search-wrapper ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #777777;
-    font-size: 17px!important;
+    color: #aaaaaa;
+    font-size: 20px !important;
+    font-family: $font-family-montserrat-semibold !important;
+    letter-spacing: 0.8px;
+    font-weight: 600;
 }
 
 .search-wrapper :-ms-input-placeholder {
     /* IE 10+ */
-    color: #777777;
-    font-size: 17px!important;
+    color: #aaaaaa;
+    font-size: 20px !important;
+    font-family: $font-family-montserrat-semibold !important;
+    letter-spacing: 0.8px;
+    font-weight: 600;
 }
 
 .search-wrapper :-moz-placeholder {
     /* Firefox 18- */
-    color: #777777;
-    font-size: 17px!important;
+    color: #aaaaaa;
+    font-size: 20px !important;
+    font-family: $font-family-montserrat-semibold !important;
+    letter-spacing: 0.8px;
+    font-weight: 600;
 }
 
 
@@ -137,6 +150,9 @@
 /*==================================
 =            navigation            =
 ==================================*/
+
+.header-transparent{margin-bottom: 0 !important;}
+
 @media screen and (min-width: 992px) {
     .transparent-bg{
         .dropdown {
@@ -147,13 +163,21 @@
             .term-travel-getaways:before { background: url($icon-path+'icon5-wh.svg') no-repeat center !important; }
             .term-lists-more:before { background: url($icon-path+'icon6-wh.svg') no-repeat center !important; }
         }
+        &.smaller-header .dropdown {
+            .term-here-now:before { background: url($icon-path+'icon1.svg') no-repeat center !important; }
+            .term-stars-stories:before { background: url($icon-path+'icon2.svg') no-repeat center !important; }
+            .term-food-drinks:before { background: url($icon-path+'icon3.svg') no-repeat center !important; }
+            .term-life-style:before { background: url($icon-path+'icon4.svg') no-repeat center !important; }
+            .term-travel-getaways:before { background: url($icon-path+'icon5.svg') no-repeat center !important; }
+            .term-lists-more:before { background: url($icon-path+'icon6.svg') no-repeat center !important; }
+        }
     }
 }
 
 
 .ahlan-menu {
     z-index: 999;
-    font-family: $font-family-montserrat;
+    font-family: $font-family-montserrat-semibold;
     .dropdown-item:focus,
     .dropdown-item:hover {
         color: #0A0A0A;
@@ -166,6 +190,7 @@
             padding: 0;
             width: 100%;
             background: #f1f1f5;
+           img {padding: 0 0 5px 0;}
         }
     }
     .iconbar {
@@ -259,12 +284,36 @@
                 height: 30px;
             }
             &.dropdown {
-                .term-here-now:before { background: url($icon-path+'icon1.svg') no-repeat center; }
-                .term-stars-stories:before { background: url($icon-path+'icon2.svg') no-repeat center; }
-                .term-food-drinks:before { background: url($icon-path+'icon3.svg') no-repeat center; }
-                .term-life-style:before { background: url($icon-path+'icon4.svg') no-repeat center; }
-                .term-travel-getaways:before { background: url($icon-path+'icon5.svg') no-repeat center; }
-                .term-lists-more:before { background: url($icon-path+'icon6.svg') no-repeat center; }
+                .term-here-now:before { background: url($icon-path+'icon1.svg') no-repeat center; 
+                    @media screen and (max-width: 767px) {
+                        background-size: 10px;
+                    }
+                }
+                .term-stars-stories:before { background: url($icon-path+'icon2.svg') no-repeat center; 
+                    @media screen and (max-width: 767px) {
+                        background-size: 15px;
+                    }
+                }
+                .term-food-drinks:before { background: url($icon-path+'icon3.svg') no-repeat center;
+                    @media screen and (max-width: 767px) {
+                        background-size: 13px;
+                    }
+                }
+                .term-life-style:before { background: url($icon-path+'icon4.svg') no-repeat center; 
+                    @media screen and (max-width: 767px) {
+                        background-size: 16px;
+                    }
+                }
+                .term-travel-getaways:before { background: url($icon-path+'icon5.svg') no-repeat center;
+                    @media screen and (max-width: 767px) {
+                        background-size: 17px;
+                    }
+                }
+                .term-lists-more:before { background: url($icon-path+'icon6.svg') no-repeat center; 
+                    @media screen and (max-width: 767px) {
+                        background-size: 17px;
+                    }
+                }
             }
             &.dropdown:hover a:after {                
                 border-bottom: 2px solid #000 !important;
@@ -295,10 +344,7 @@
                 color: #1c1c1c;
             }
         }
-        img {
-            margin-bottom: 15px;
-            border: 5px solid #fff;
-        }
+        
         @media screen and (max-width: 991px) {
             background-color: $white  !important;
             position: static;
@@ -405,7 +451,8 @@
 li.nav-item.dropdown.active .display-no {
     display: none;
 }
-
+.transparent-bg .head-social li a i.search-icon {background: url(../images/social-icons-white.svg) top center no-repeat; background-position: -106px;}
+.transparent-bg.smaller-header .head-social li a i.search-icon {background: url(../images/social-icons-black.svg) top center no-repeat; background-position: -106px;}
 .head-social {
     list-style: none;
     margin: 0;
@@ -416,8 +463,19 @@ li.nav-item.dropdown.active .display-no {
         a {
             float: left;
             padding: 0;
-        }
+            i.search-icon {
+                background: url(../images/social-icons-black.svg) top center no-repeat;
+                background-position: -106px;
+                width: 20px;
+                height: 20px;
+                float: left;
+                margin-top: 3px;
+                &:before {display:none;}
+            }
     }
+        
+        
+}
     
     @media screen and (max-width: 991px) {
         display: none;
@@ -435,12 +493,15 @@ li.nav-item.dropdown.active .display-no {
     font-family: $font-family-montserrat-bold;
 }
 
-.view-all {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    font-family: $font-family-merriweather-bold-italic;
+.view-all-link {
+    img {
+        visibility: hidden;
+    }    
+    .view-all {
+        font-size: 14px;
+        margin-left: 20%;
+        font-family: $font-family-merriweather-bold-italic;
+    }
 }
 
 header {
@@ -454,7 +515,7 @@ header {
         position: absolute !important;
     }
     @media screen and (max-width: 991px) {
-       position: absolute;
+    //    position: absolute;
        top:0;
        &.smaller-header {
            position: fixed  !important;
@@ -470,7 +531,6 @@ header {
         //     margin: 0 auto 0 0;
         // }
         .ahlan-menu {
-            border:none;
             .navbar-brand {background: rgba(241, 241, 245, 0);}
         }
         
@@ -492,17 +552,17 @@ header {
     z-index: 100;
     right: 0;
     margin: auto;
-    &.active {border-left: 1px solid #000;}
+    &.active {border-left: 1px solid #d9d9d9;}
     .hamburger {
         background: #000000;
         display: block;
         height: 2px;
         left: 0;
         position: absolute;
-        top: 0;
+        top: -5px;
         transform-origin: center;
         transition: .5s ease-in-out;
-        width: 18px;
+        width: 20px;
         right: 0;
         margin: auto;
         transform: rotate(-10deg);
@@ -528,6 +588,8 @@ header {
     }
     &.active .hamburger {
         transform: rotate(45deg);
+        top: 0;
+        height: 1px;
         &:before {
             top: 0;
             right: 0;
@@ -558,7 +620,7 @@ header {
         z-index: 100;
         right: 50px;
         margin: auto;
-        border-left: 1px solid #000;
+        border-left: 1px solid #d9d9d9;
         display: none;
         i {
             display: flex;
@@ -573,6 +635,10 @@ header {
             height: 35px;
             align-items: center;
             justify-content: center;
+
+            background: url(../images/social-icons-black.svg) top center no-repeat;
+            background-position: -98px;   
+            &:before {display: none;} 
         }
     }
 }
@@ -602,8 +668,18 @@ header {
     }
 }
 
+.mobile-footer {min-height: 80px; width:100%; background: $black; display: inline-block; position: fixed; left: 0; right: 0; bottom: 0;}
+
+
 @media (max-width: 991px) {
   
+    li.nav-item.dropdown.active-menu {
+        background: #fff;
+        .dropdown-icon{
+            &:after {transform:rotate(45deg); top: -5px;}
+        }
+        
+    }
     .ahlan-menu .container {
         width: 100% !important;
         max-width: 100%;
@@ -638,7 +714,7 @@ header {
         box-sizing: border-box;
         .nav-item.dropdown {
             border-top: 1px solid rgba(180, 180, 180, 0.25);
-            padding: 0 30px 0 55px;
+            padding: 5px 30px 5px 55px;
             &.show{ background-color: $white; }
             .dropdown-menu {
                 .mega-menu-heading, 
@@ -683,24 +759,67 @@ header {
 
 @media screen and (min-width: 992px) {
 
+
+    .dropdown-menu .nav-content {
+        span {
+            opacity: 1 !important;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 5px solid #fff;
+            
+            &::before { content: "";
+                // background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: .55; }
+        }
+    }
+
     .nav-content ul li a {
         color: #000;
         font-size: 14px;
         font-family: $font-family-merriweather-italic;
         line-height: 1.71;
         text-transform: none;
+        display: inherit;
     }
-
+    .dropdown-menu ul li a span:hover:before {display:none;}
     .dropdown-menu {
         .display-no {
             margin-bottom: 20px;
        
-        ul li a {
-            color: #000;
-            font-size: 14px;
-            font-family: $font-family-merriweather-italic;
-            line-height: 1.71;
-        } 
+            ul li a {
+                color: #000;
+                font-size: 14px;
+                font-family: $font-family-merriweather-italic;
+                line-height: 1.71;
+                display: inherit;
+            &:hover {color:#a5a5a5;}
+            } 
+            span {
+                opacity: 1 !important;
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: relative;
+                margin-bottom: 15px;
+                border: 5px solid #fff;
+                overflow: hidden;
+
+                &::before { content: "";
+                    // background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: .55; }
+            }
         }
         .nav-content {
             margin-bottom: 19px;
@@ -712,6 +831,7 @@ header {
     .navbar {
         padding-top: 0;
         padding-bottom: 0;
+        border-bottom: 1px solid #dadada;
         .dropdown-menu {
             -webkit-transition: 0.3s linear all;
             -moz-transition: 0.3s linear all;
@@ -721,15 +841,15 @@ header {
             background-color: #F5F5F8;
             border-radius: 0;
             border: none;
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.0);
             display: block;
             left: 0;
-            opacity: 0;
+            opacity: 0; 
             padding: 0;
             right: 0;
             top: 100%;
             transform-origin: 0 0;
-            transform: rotateX(-75deg);
+            transform:  translateY(50px);
             visibility: hidden;
             width: 100%;
             min-height: 350px;
@@ -752,7 +872,7 @@ header {
         margin:0;
     }
     .ahlan-menu .navbar-nav .nav-item .nav-link {
-        padding: 13px 0;
+        padding: 16px 0;
         font-family: $font-family-montserrat-semibold;
         font-size: 14px;
         letter-spacing: 0.42px;
@@ -813,13 +933,19 @@ header {
 
 
 /*++++ Transparent header code starts++++*/
-
+@media screen and (min-width: 992px) {
+    header.transparent-bg .navbar .dropdown-menu { margin-top: 0; }
+}
 header.transparent-bg {
     position: absolute;
     z-index: 999;
     width: 100%;
     border-bottom: solid 1px rgba(229, 227, 227, 0.33);
     top: 0;
+    .navbar {border-bottom: none;}
+    .navbar-nav .nav-item.dropdown:hover a:after { border-color: #fff !important;}
+    &.smaller-header .navbar-nav .nav-item.dropdown:hover a:after { border-color: #000 !important;}
+
     .ahlan-menu {
         .navbar-nav {
             .nav-item {
@@ -855,8 +981,8 @@ header.transparent-bg {
 }
 .smaller-header {
     position: fixed !important;
-    backdrop-filter: blur(5px);
-    background: rgba(244, 244, 247, 0.6);
+    backdrop-filter: blur(9px);
+    background: rgba(244, 244, 247, 0.9);
     .top-logo {padding:0;}
     .ahlan-menu .navbar-nav .nav-item .nav-link {
         color:#000 !important;
@@ -872,6 +998,20 @@ header.transparent-bg {
 }
 
 @media screen and (max-width: 991px) {
+
+     .ahlan-menu .navbar-nav .nav-item.active-menu:before {
+        content: '';
+        height: 55px;
+        width: 2px;
+        background: #626262;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    li.nav-item.dropdown.active-menu {
+        background: #fff;
+    }
+
     .transparent-bg {
         .navbar-brand {
             background: none !important;

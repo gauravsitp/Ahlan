@@ -1,69 +1,163 @@
-.home-four-grid {
-    @include breakpoint(lg) {
-        padding-bottom: 4.375rem !important;
+    .home-four-grid {
+        @include breakpoint(lg) {
+            padding-bottom: 4.375rem !important;
+        }
     }
-}
-
-.common-space {
-    @include breakpoint(lg) {
-        padding-top: 4.375rem !important;
-        padding-bottom: 4.375rem !important;
+    
+    .common-space {
+        @include breakpoint(lg) {
+            padding-top: 4.375rem !important;
+            padding-bottom: 4.375rem !important;
+        }
     }
-}
-
-.trending-slider.common-space {
-    @include breakpoint(lg) {
-        padding-top: calc(4.375rem + 25px) !important;
+    
+    .trending-slider.common-space {
+        @include breakpoint(lg) {
+            padding-top: calc(4.375rem + 25px) !important;
+        }
     }
-}
-
-.home-one-grid {
-    @include breakpoint(lg) {
-        padding-top: 4.37rem !important;
-        padding-bottom: 2rem !important;
+    
+    .home-one-grid {
+        @include breakpoint(lg) {
+            padding-top: 4.37rem !important;
+            padding-bottom: 2rem !important;
+        }
     }
-}
-
-.home-two-grid .col-md-9 .row,
-.home-three-grid .row {
-    @include breakpoint(lg) {
-        margin-bottom: 2.25rem !important;
+    
+    .home-two-grid .col-md-9 .row,
+    .home-three-grid .row,
+    .add-col-6 .mb-4,
+    .listing-main-space .mb-4 {
+        @include breakpoint(lg) {
+            margin-bottom: 2.25rem !important;
+        }
     }
-}
-
-.home-three-grid .row:last-child {
-    @include breakpoint(lg) {
-        margin-bottom: 0 !important;
+    
+    .home-three-grid .row:last-child {
+        @include breakpoint(lg) {
+            margin-bottom: 0 !important;
+        }
     }
-}
-
-.home-padding {
-    padding-bottom: 0rem !important;
-    @include breakpoint(sm) {
-        padding-bottom: 1rem !important;
+    
+    .home-padding {
+        padding-bottom: 0rem !important;
+        @include breakpoint(sm) {
+            padding-bottom: 1rem !important;
+        }
+        @include breakpoint(md) {
+            padding-bottom: 1rem !important;
+        }
+        @include breakpoint(lg) {
+            padding-bottom: 17px !important;
+        }
     }
-    @include breakpoint(md) {
-        padding-bottom: 1rem !important;
+    
+    .child-css .col-md-9 .big-main-image.mb-7 {
+        margin-bottom: 27px !important;
     }
-    @include breakpoint(lg) {
-        padding-bottom: 17px !important;
+    
+    .mobile-cs.child-css .col-md-9 .big-main-image.mb-7,
+    .child-css .col-md-9 .big-main-image.mb-7:last-child {
+        @include maxbreakpoint(smm) {
+            margin-bottom: 18px !important
+        }
     }
-}
-
-.child-css .col-md-9 .big-main-image.mb-7 {
-    margin-bottom: 27px !important;
-}
-
-.mobile-cs.child-css .col-md-9 .big-main-image.mb-7,
-.child-css .col-md-9 .big-main-image.mb-7:last-child {
-    @include maxbreakpoint(smm) {
-        margin-bottom: 18px !important
+    
+    .mobile-cs.child-css.py-5,
+    .three-column-bottom.child-css.py-5 {
+        @include maxbreakpoint(smm) {
+            padding-bottom: .5rem !important;
+        }
     }
-}
-
-.mobile-cs.child-css.py-5,
-.three-column-bottom.child-css.py-5 {
-    @include maxbreakpoint(smm) {
-        padding-bottom: .5rem !important;
+    
+    .inner-page-trending.py-5 {
+        @include maxbreakpoint(smm) {
+            padding-top: 50px !important;
+        }
     }
-}
+    
+    .add-col-6 .small-main-img,
+    .home-three-grid .small-main-img {
+        @include maxbreakpoint(smm) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .not-front .py-3 {
+        @include maxbreakpoint(smm) {
+            padding-bottom: 0 !important;
+            padding-top: 2rem !important;
+        }
+    }
+    
+    .mobile-cs.mp-0 {
+        @include maxbreakpoint(smm) {
+            padding: 0 !important;
+        }
+    }
+    
+    .mobile-cs.inner-page-trending.mp-0 {
+        @include maxbreakpoint(smm) {
+            padding-top: 20px !important;
+        }
+    }
+    
+    .mobile-cs.mp-0 {
+        @include maxbreakpoint(smm) {
+            padding: 0 !important;
+        }
+    }
+    
+    .mobile-cs.inner-page-trending.mp-0 {
+        @include maxbreakpoint(smm) {
+            padding-top: 20px !important;
+        }
+    }
+    
+    .section-food-drinks .common-space.also-like.three-column-bottom {
+        padding-bottom: 5rem !important;
+    }
+    
+    .section-food-drinks .common-space.also-like.three-column-bottom {
+        @include maxbreakpoint(smm) {
+            padding-bottom: 0 !important;
+        }
+    }
+    
+    .section-food-drinks .common-space.also-like {
+        padding-bottom: 3rem !important;
+    }
+    
+    .mobile-slider .cus-sm-img.zoom-effect a:before {
+        @include minbreakpoint(sm) {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            background: transparent;
+            background: #B9B9B9;
+            opacity: 0;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+    }
+    
+    .mobile-slider .zoom-effect:hover img {
+        @include minbreakpoint(sm) {
+            opacity: 1;
+        }
+    }
+    
+    .mobile-slider .cus-sm-img.zoom-effect:hover a:before {
+        @include minbreakpoint(sm) {
+            opacity: .4;
+        }
+    }
+    
+    .advertisment-section .mb-7 {
+        @include maxbreakpoint(xs) {
+            margin-bottom: 1rem !important;
+        }
+    }

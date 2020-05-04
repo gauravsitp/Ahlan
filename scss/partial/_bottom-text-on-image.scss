@@ -1,5 +1,6 @@
         .big-main-image {
             position: relative;
+            margin-bottom: 0 !important;
             .bottom-content {
                 color: white;
                 z-index: 2;
@@ -15,7 +16,7 @@
                 display: inline-block;
                 margin: 0 50px;
                 margin: 0 auto;
-                margin-top: -1.6rem;
+                margin-top: -1.4rem;
                 @include breakpoint(sm) {
                     margin-top: -2.5rem;
                 }
@@ -25,12 +26,24 @@
                 @include breakpoint(lg) {
                     margin-top: -3rem;
                 }
+                @include minbreakpoint(md) {
+                    min-height: 200px;
+                }
+                @include minbreakpoint(sm) {
+                    min-height: 180px;
+                }
+                @include maxbreakpoint(xs) {
+                    min-height: 100px;
+                }
                 .cus-content {
                     background: $gray-light-body;
                     display: inline-block;
-                    padding: 0 5px;
-                    padding-top: .5rem;
+                    padding: 0 10px;
+                    padding-top: .2rem;
                     margin-bottom: .2rem;
+                    @include maxbreakpoint(xs) {
+                        margin-bottom: 0rem;
+                    }
                     @include breakpoint(md) {
                         padding: 0 25px;
                         padding-top: .5rem;
@@ -54,7 +67,19 @@
         .section-celebrity {
             .big-main-image {
                 .parent-bottom-content {
-                    max-width: 50%;
+                    max-width: 85%;
+                    @include breakpoint(xs) {
+                        max-width: 80%;
+                    }
+                    @include breakpoint(sm) {
+                        max-width: 70%;
+                    }
+                    @include breakpoint(md) {
+                        max-width: 70%;
+                    }
+                    @include breakpoint(lg) {
+                        max-width: 70%;
+                    }
                 }
             }
         }
@@ -62,15 +87,15 @@
         .section-celebrity {
             .big-main-image {
                 .bottom-content {
-                    margin-bottom: -1rem;
+                    margin-top: -.7rem;
                     @include breakpoint(sm) {
-                        margin-bottom: -1rem;
+                        margin-top: -1.2rem;
                     }
                     @include breakpoint(md) {
-                        margin-bottom: -3rem;
+                        margin-top: -1.6rem;
                     }
                     @include breakpoint(lg) {
-                        margin-bottom: -3rem;
+                        margin-top: -2rem;
                     }
                     // @include maxbreakpoint(xs) {
                     //     margin-bottom: -3.3rem;

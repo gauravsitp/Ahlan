@@ -8,7 +8,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.7;
+    background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.45) 62%, rgba(0, 0, 0, 0.45) 37%, #000000);
+    // background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0) 100%);
 }
 
 .header-transparent {
@@ -48,7 +50,8 @@
     display: block;
     width: 100%;
     background-color: rgba(248, 248, 250, .5);
-    backdrop-filter: blur(1.9px) opacity(50%);
+    // backdrop-filter: blur(1.9px) opacity(50%);
+    backdrop-filter: blur(1.9px);
     z-index: 99;
     overflow: hidden;
     border-top: solid 1px #ffffff45;
@@ -98,7 +101,7 @@ ul.sub-navigation-content {
             &:hover {
                 border-top: solid 3px #fff;
                 background-color: rgba(255, 255, 255, 0.3);
-                transition: all .6s ease-in-out;
+                transition: all ease-in-out;
             }
             // &:before {
             //     content: '';
@@ -126,38 +129,58 @@ ul.sub-navigation-content {
 }
 
 .section-celebrity {
-    // background-repeat: repeat;
-    // background-attachment: fixed;
-    // background-size: contain;
-    // background-position: center center;
-    padding: 7rem 0 2rem 0 !important;
+    @include breakpoint(md) {
+        padding: 2rem 0 2rem 0 !important;
+    }
+    @include breakpoint(lg) {
+        padding: 4rem 0 2rem 0 !important;
+    }
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0rem !important;
-    background-position: top center;
+    background-position: center -1.1rem;
     @include breakpoint(sm) {
-        margin-bottom: 1rem !important;
+        background-position: center -2rem
     }
     @include breakpoint(md) {
-        margin-bottom: 1rem !important;
+        background-position: center -3rem;
+    }
+    @include breakpoint(lg) {
+        background-position: center -4.5rem;
     }
     // @include breakpoint(lg) {
     //     margin-bottom: 3rem !important;
     // }
     @include maxbreakpoint(smm) {
-        padding: 4rem 0 0rem 0 !important
+        padding: 2rem 0 0rem 0 !important
     }
-    @include maxbreakpoint(xs) {
-        padding: 3rem 0 0rem 0 !important
-    }
+    // @include maxbreakpoint(xs) {
+    //     padding: 1rem 0 0rem 0 !important
+    // }
     .view {
-        margin: 7rem 0 2rem 0 !important;
+        margin: 3rem 0 2rem 0 !important;
+        @include breakpoint(sm) {
+            margin: 4rem 0 0rem 0 !important;
+        }
+        @include breakpoint(md) {
+            margin: 5rem 0 2rem 0 !important;
+        }
+        @include breakpoint(lg) {
+            margin: 5rem 0 2rem 0 !important;
+        }
         @include maxbreakpoint(xs) {
-            margin: 4rem 0px 0rem 0 !important;
+            margin: 2rem 0px 0rem 0 !important;
         }
     }
     .icon-center {
         transition: none;
+    }
+}
+
+.section-celebrity.foodie-trending {
+    @include breakpoint(lg) {
+        padding: 3rem 0 2rem 0 !important;
+        background-position: center -6rem;
     }
 }
 
@@ -184,7 +207,7 @@ ul.sub-navigation-content {
 
 @include maxbreakpoint(xs) {
     .section-celebrity.py-5 {
-        padding-bottom: 2rem !important;
+        padding-bottom: 1rem !important;
     }
 }
 
@@ -349,20 +372,19 @@ ul.sub-navigation-content {
     box-shadow: none;
 }
 
-.slide .big-main-image {
-    transform: scale(0.9);
-    @include maxbreakpoint(xs) {
-        transform: scale(0.95)
-    }
-    transition: all 1s ease-out;
-    max-width: 100%;
-    position: relative;
-    .bottom-content {
-        // display: none !important;
-        visibility: hidden !important;
-    }
-}
-
+// .slide .big-main-image {
+//     transform: scale(0.9);
+//     @include maxbreakpoint(xs) {
+//         transform: scale(0.95)
+//     }
+//     transition: all 1s ease-out;
+//     max-width: 100%;
+//     position: relative;
+//     .bottom-content {
+//         // display: none !important;
+//         visibility: hidden !important;
+//     }
+// }
 // .slider-wr .slick-track {
 //     padding: 65px 0px;
 //     padding-bottom: 20px;
@@ -394,7 +416,6 @@ ul.sub-navigation-content {
     margin: 0 !important;
 }
 
-
 .slide {
     padding: 0 6px;
     @include maxbreakpoint(smm) {
@@ -402,73 +423,79 @@ ul.sub-navigation-content {
     }
     box-sizing: border-box;
 }
+
 .slider-w {
-    .slick-slide{
-        &:not(.slick-center) > div  {
+    .slick-slide {
+        &:not(.slick-center)>div {
             transform-origin: bottom;
             transform: translateY(8.7%);
         }
-         
-        img{
+        img {
             transform: scale(0.9) translateY(2%);
             transition: 1s transform;
             transform-origin: top;
         }
-
-        @include media-breakpoint-down(lg){
-            width: 800px;  
+        @include media-breakpoint-down(lg) {
+            width: 800px;
         }
-
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
             width: 600px;
         }
-
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             width: 500px;
         }
-
-        @include media-breakpoint-down(xs){
+        @include media-breakpoint-down(xs) {
             width: 300px;
         }
     }
-
     .slick-center {
-        img{
-            transform: scale(1) translateY(2%);
+        img {
+            transform: scale(1.06) translateY(-1%);
+            @include breakpoint(xs) {
+                transform: scale(1.06) translateY(-3%);
+            }
+            @include breakpoint(sm) {
+                transform: scale(1.1) translateY(-3%);
+            }
+            @include breakpoint(md) {
+                transform: scale(1.1) translateY(-4%);
+            }
+            @include breakpoint(lg) {
+                transform: scale(1.1) translateY(-5.5%);
+            }
+            @include breakpoint(lgcus) {
+                transform: scale(1.1) translateY(-6.5%);
+            }
         }
-       
-        .bottom-content{
+        .bottom-content {
             transition: 0.5s opacity visibility;
             opacity: 1;
             visibility: visible;
         }
     }
-
     .bottom-content {
         position: relative;
-        background-color: $white;
-        padding: 10px;
+        // padding: 10px;
         opacity: 0;
         visibility: hidden;
-        top: -60px;
+        // top: -60px;
     }
 }
 
-.slide.slick-center .big-main-image {
-    transform: scale(1.1);
-    @include maxbreakpoint(xs) {
-        transform: scale(1);
-    }
-    transform-origin: bottom;
-    margin-top: 12px;
-    margin-bottom: 0 !important;
-    transition: all 1s ease-out;
-    .bottom-content {
-        // display: block !important;
-        visibility: visible !important;
-    }
-}
-
+// .slide.slick-center .big-main-image {
+//     transform: scale(1.1);
+//     @include maxbreakpoint(xs) {
+//         transform: scale(1);
+//     }
+//     transform-origin: bottom;
+//     margin-top: 12px;
+//     margin-bottom: 0 !important;
+//     transition: all 1s ease-out;
+//     .bottom-content {
+//         // display: block !important;
+//         visibility: visible !important;
+//     }
+// }
 .section-celebrity .big-main-image .cus-img img {
     width: 100%;
 }

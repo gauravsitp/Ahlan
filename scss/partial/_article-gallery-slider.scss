@@ -49,7 +49,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        min-height: 550px;
+        min-height: 750px;
         z-index: 1;
         display: flex;
         justify-content: space-between;
@@ -150,7 +150,7 @@
 }
 
 .slider-counter {
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     vertical-align: top;
     text-align: left;
@@ -176,7 +176,7 @@
 
 .post-main {
     position: relative;
-    height: 550px;
+    height: 750px;
     background: #fff;
     img {
         max-width: 100%;
@@ -262,7 +262,7 @@
 .slider-list-view {
     overflow-y: scroll;
     padding-right: 90px;
-    height: 550px;
+    height: 750px;
     background: #fff;
     @include maxbreakpoint(xs) {
         padding-right: 40px;
@@ -272,27 +272,27 @@
         overflow: hidden;
         position: relative;
         cursor: pointer;
-        &:before {
-            content: "";
-            position: absolute;
-            background-color: rgba($color: #000000, $alpha: 0.4);
-            text-align: center;
-            top: 0;
-            right: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        &:after {
-            content: "View Image";
-            position: absolute;
-            width: 100%;
-            color: $white;
-            left: 0;
-            top: 50%;
-            text-align: center;
-            margin-top: -10px;
-        }
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     background-color: rgba($color: #000000, $alpha: 0.4);
+        //     text-align: center;
+        //     top: 0;
+        //     right: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        // &:after {
+        //     content: "View Image";
+        //     position: absolute;
+        //     width: 100%;
+        //     color: $white;
+        //     left: 0;
+        //     top: 50%;
+        //     text-align: center;
+        //     margin-top: -10px;
+        // }
     }
     &:after {
         content: "";
@@ -322,12 +322,16 @@
 
 .slider-options-collapse {
     .btn-grid {
-        .fa-th:before {
-            content: "\f00b";
+        .fa-th {
+            background-image: url("/sites/all/themes/ahlan_revamp/images/close.svg");
         }
     }
     .slider-counter,
     .btn-group {
         display: none;
     }
+}
+
+.article-slider .slick-slide {
+    outline: none;
 }

@@ -9,14 +9,13 @@
 //     line-height: $line-height-36;
 //     font-family: $font-family-merriweather-bold;
 // }
-.normal-grid-text {
-    .small-btn-content {
-        @include maxbreakpoint(xs) {
-            padding: 0 20px;
-        }
-    }
-}
-
+// .normal-grid-text {
+//     .small-btn-content {
+//         @include maxbreakpoint(xs) {
+//             padding: 0 20px;
+//         }
+//     }
+// }
 .small-main-img {
     .cus-sm-img {
         margin-bottom: 17px;

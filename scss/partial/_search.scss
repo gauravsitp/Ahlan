@@ -16,6 +16,9 @@
                 flex: 2;
                 .cus-content {
                     margin-bottom: 2rem;
+                    @include maxbreakpoint(smm) {
+                        margin-bottom: 1rem;
+                    }
                 }
                 h2 {
                     // font-size: $font-size-28;
@@ -39,9 +42,9 @@
                     }
                 }
                 .post-cat {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
+                    // position: absolute;
+                    // left: 0;
+                    // bottom: 0;
                     .publish-date {
                         color: #b9b9b9;
                         display: block;
@@ -52,7 +55,7 @@
                     }
                 }
                 .icon-center {
-                    width: 40px;
+                    width: 50px;
                     margin: .3rem 0 .3rem 0;
                     .center-icon {
                         @include maxbreakpoint(xs) {
@@ -64,10 +67,10 @@
                         margin: 0;
                     }
                     @include breakpoint(sm) {
-                        width: 50px;
+                        width: 60px;
                     }
                     @include breakpoint(md) {
-                        width: 60px;
+                        width: 70px;
                     }
                     @include breakpoint(lg) {
                         width: 80px;
@@ -83,6 +86,20 @@
                         }
                         @include breakpoint(lg) {
                             width: 25px;
+                        }
+                    }
+                    .center-icon.large-icon {
+                        @include breakpoint(sm) {
+                            width: 20px;
+                            height: 19px;
+                        }
+                        @include breakpoint(md) {
+                            width: 24px;
+                            height: 23px;
+                        }
+                        @include breakpoint(lg) {
+                            width: 27px;
+                            height: 26px;
                         }
                     }
                 }
@@ -223,15 +240,21 @@
         }
     }
      ::-webkit-input-placeholder {
-        font-size: 20px!important;
-        color: #aaaaaa!important;
+        color: #aaaaaa;
+        font-size: 20px !important;
+        font-family: $font-family-montserrat !important;
+        letter-spacing: 0.8px !important;
+        font-weight: 600;
         @include maxbreakpoint(xs) {
             font-size: 12px!important;
         }
     }
      ::-moz-placeholder {
-        font-size: 20px!important;
-        color: #aaaaaa!important;
+        color: #aaaaaa;
+        font-size: 20px !important;
+        font-family: $font-family-montserrat !important;
+        letter-spacing: 0.8px !important;
+        font-weight: 600;
         @include maxbreakpoint(xs) {
             font-size: 12px!important;
         }
@@ -242,5 +265,235 @@
     margin-top: 40px;
     @include maxbreakpoint(xs) {
         margin-top: 10px;
+    }
+}
+
+
+/*LISTIN SEARCH ITEM PAGE CSS*/
+
+.listing-search-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 5px 0;
+    margin-right: 5px;
+    padding-bottom: 15px;
+}
+
+.listing-search-item h3 {
+    float: left;
+    margin: 0;
+    font-family: $font-family-merriweather-bold;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.listing-search-item h3 span,
+.listing-search-item h3 a {
+    background: #242424 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    // padding: 2px;
+    text-align: center;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.listing-search-item .listing-search-list {
+    margin: 2px 55px 0;
+    position: relative;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.listing-search-item .listing-search-list ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    @include maxbreakpoint(xs) {
+        float: none;
+        width: 100%;
+    }
+}
+
+.listing-search-item .listing-search-list ul:first-child {
+    padding-right: 20px;
+    width: 45%;
+    @include maxbreakpoint(xs) {
+        width: 100%;
+    }
+}
+
+.listing-search-item .listing-search-list ul li {
+    border: 0 none;
+    list-style: outside none none;
+    padding: 0 0 6px;
+    font-family: $font-family-merriweather-regular;
+}
+
+.listing-search-item .listing-search-list ul li a {
+    color: #242424;
+    font-size: 18px;
+    @include maxbreakpoint(xs) {
+        font-size: 1rem;
+    }
+}
+
+.listing-searchbox {
+    background: #242424;
+    color: #fff;
+    margin: 0 0 25px;
+    padding: 15px;
+}
+
+.listing-search-item a.search-supp-link {
+    float: right;
+    // font-weight: bold;
+    // text-transform: uppercase;
+    color: #242424;
+    font-family: $font-family-merriweather-italic;
+}
+
+.listing-searchbox .float-left {
+    float: left;
+}
+
+.listing-searchbox .pplsearch {
+    width: 45%;
+    margin: 4px 0 0 0;
+    float: left;
+    @include maxbreakpoint(xs) {
+        width: 100%;
+    }
+}
+
+.listing-searchbox .views-exposed-widgets {
+    position: relative;
+}
+
+.views-exposed-widgets {
+    margin-bottom: .5em;
+}
+
+.listing-searchbox .pplsearch .views-exposed-form .views-exposed-widget label {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 5px 5px;
+    text-align: left;
+    font-family: $font-family-montserrat;
+}
+
+a.col-pink {
+    font-family: $font-family-merriweather-regular;
+    color: #242424;
+    font-size: 28px;
+}
+
+.listing-searchbox .alphabetfilter h3 {
+    color: #fff;
+    font-size: 1em;
+    margin: 0 5px 5px;
+    text-align: left;
+    font-family: $font-family-merriweather-regular;
+}
+
+.listing-searchbox .views-exposed-widgets .views-widget {
+    position: relative;
+    padding: 0 40px 0 0;
+    background: #fff;
+    height: 36px;
+}
+
+.views-exposed-form .form-item {
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+}
+
+.listing-searchbox .views-exposed-widgets .views-exposed-widget input.form-text {
+    border: 0;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    // padding: 8px 10px; */
+    height: 36px;
+}
+
+.views-exposed-form .form-item,
+.views-exposed-form .form-submit {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-item {
+    margin: 1.5em 0;
+}
+
+.listing-searchbox .views-exposed-widgets .views-submit-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 36px;
+    width: 37px;
+    z-index: 2;
+    padding: 0;
+}
+
+.listing-searchbox .views-exposed-widgets .views-submit-button input.form-submit {
+    height: 36px;
+    width: 36px;
+    text-indent: -9999em;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+    margin: 29px 0 0;
+}
+
+.listing-searchbox .views-exposed-widgets .views-submit-button:after {
+    content: '\f002';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 8px;
+    top: 37px;
+    z-index: 1;
+    color: #ab1328;
+}
+
+@media only screen and (max-width: 1240px) and (min-width: 921px) {
+    .listing-searchbox .pplsearch {
+        width: 310px;
+    }
+}
+
+.listing-searchbox .alphabetfilter a {
+    color: #c4c4c4;
+    font-family: $font-family-merriweather-regular;
+    margin: 0 4px 0 0;
+    padding: 0 4px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.listing-searchbox .float-right {
+    float: right;
+}
+
+.listing-searchbox .alphabetfilter {
+    width: 45%;
+    line-height: 25px;
+    float: right;
+    @include maxbreakpoint(xs) {
+        width: 100%;
     }
 }

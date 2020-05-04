@@ -28,31 +28,17 @@
                                 padding: 0 0;
                                 padding-top: .5rem;
                                 padding-right: 20px;
+                                margin-bottom: 1.2rem;
                                 a {
                                     display: block;
                                 }
                                 @include maxbreakpoint(xs) {
                                     padding: .5rem .4rem 0 .4rem;
                                 }
-                                // .cus-big-title {
-                                //     font-size: 1.25rem;
-                                //     line-height: 1.5625rem;
-                                //     @include breakpoint(sm) {
-                                //         font-size: 1.75rem;
-                                //         line-height: 2.1875rem;
-                                //     }
-                                //     @include breakpoint(md) {
-                                //         font-size: 1.9375rem;
-                                //         line-height: 2.5625rem;
-                                //     }
-                                //     @include breakpoint(lg) {
-                                //         font-size: $font-size-46;
-                                //         line-height: $line-height-58;
-                                //     }
-                                // }
                                 @include maxbreakpoint(xs) {
                                     font-size: $font-size-20;
                                     line-height: $font-size-30;
+                                    margin-bottom: .5rem;
                                     a {
                                         font-size: $font-size-20;
                                         line-height: $font-size-30;
@@ -295,6 +281,7 @@
                 
                 .also-like {
                     padding: 3rem 0;
+                    padding-bottom: 0 !important;
                     .small-main-img {
                         @include maxbreakpoint(xs) {
                             position: relative;
@@ -303,7 +290,7 @@
                             @include maxbreakpoint(xs) {
                                 position: absolute;
                                 z-index: 1;
-                                bottom: 2px;
+                                bottom: 8px;
                                 left: 0;
                                 right: 0;
                                 pointer-events: none;
@@ -418,10 +405,20 @@
                                 font-size: 14px;
                                 line-height: 18px;
                                 padding: 0px 2px;
+                                max-width: 95%;
+                                margin: 0 auto;
                             }
                             .cus-date {
                                 font-size: 8px;
                             }
+                        }
+                    }
+                }
+                
+                .not-front {
+                    .also-like {
+                        @include maxbreakpoint(xs) {
+                            margin-bottom: 0px !important;
                         }
                     }
                 }
@@ -431,6 +428,7 @@
                         line-height: $line-height-29;
                         margin-bottom: 20px;
                         font-family: $font-family-montserrat;
+                        font-weight: 600;
                     }
                     .pullquote-container {
                         @include breakpoint(sm) {
@@ -445,6 +443,7 @@
                         font-size: $font-size-22;
                         line-height: $line-height-36;
                         font-family: $font-family-merriweather-light-italic;
+                        font-weight: normal;
                         span {
                             padding: 0rem 1rem;
                             position: relative;
@@ -549,7 +548,8 @@
                     }
                 }
                 
-                .media-youtube-video {
+                .media-youtube-video,
+                .youtube-video-container {
                     position: relative;
                     padding-bottom: 56.25%;
                     padding-top: 30px;
@@ -557,7 +557,8 @@
                     overflow: hidden;
                 }
                 
-                .media-youtube-video iframe {
+                .media-youtube-video iframe,
+                .youtube-video-container iframe {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -586,6 +587,9 @@
                                 }
                                 &.term-travel-getaways {
                                     background-image: url(/sites/all/themes/ahlan_revamp/images/white-travel-getaways.png);
+                                }
+                                &.default-icon {
+                                    background-image: url(/sites/all/themes/ahlan_revamp/images/default-white.png);
                                 }
                                 .large-icon {
                                     width: 15px;
@@ -662,7 +666,7 @@
                 }
                 
                 .article-page-main-wrapper.article-section-image {
-                    padding-bottom: 3rem !important;
+                    padding-bottom: 6rem !important;
                     @include maxbreakpoint(xs) {
                         padding-bottom: 1.25rem !important;
                     }
@@ -707,6 +711,7 @@
                     color: #868686;
                     padding: 3px 17px;
                     display: block;
+                    font-weight: 600;
                     cursor: pointer;
                     font-family: $font-family-montserrat;
                     @include breakpoint(sm) {
@@ -730,4 +735,19 @@
                 
                 .gallery-icon .parent-bottom-content .bottom-content .cus-content {
                     margin-bottom: .6rem;
+                }
+                
+                .share-content ul li a:hover {
+                    color: #9F9F9F;
+                    transition: all .6s;
+                }
+                
+                .cus-author a:hover {
+                    color: #000;
+                }
+                
+                .more-competition .small-main-img a img {
+                    @include maxbreakpoint(xs) {
+                        min-height: 148px;
+                    }
                 }

@@ -1,7 +1,7 @@
     .competion-page {
         .cmp-image {
             .bottom-content {
-                left: calc(100% - 92.3%);
+                left: calc(100% - 88.3%);
                 padding-left: .5rem;
                 @include breakpoint(sm) {
                     left: -1px;
@@ -13,8 +13,8 @@
         }
         .cmp-main-content {
             .section-lead-text {
-                margin: 35px 0 40px 0;
-                margin-top: 1rem;
+                margin: 30px 0 42px 0;
+                // margin-top: 1rem;
             }
             .cmp-image {
                 .cls-date {
@@ -24,9 +24,13 @@
                     letter-spacing: .36px;
                     font-family: $font-family-montserrat;
                     text-transform: uppercase;
+                    font-weight: 600;
                     @include maxbreakpoint(xs) {
                         line-height: normal;
                         font-size: 8px;
+                        display: block;
+                        margin-bottom: 4px;
+                        margin-top: 2px;
                     }
                 }
                 .icon-center {
@@ -175,6 +179,7 @@
                             box-shadow: none;
                             height: 46px;
                             letter-spacing: 0.26px;
+                            margin-top: 0;
                         }
                         .input-group-prepend {
                             span {
@@ -352,4 +357,14 @@
         text-align: center;
         color: #af0000;
         margin-right: 3px;
+        font-weight: 600;
+    }
+    
+    .article-suboption {
+        .btn:not(:disabled):not(.disabled):active:focus,
+        .btn:not(:disabled):not(.disabled):active,
+        .btn:focus,
+        .btn.focus {
+            box-shadow: none;
+        }
     }
